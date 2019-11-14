@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260336237E03FF0076F63A /* AppDelegate.swift */; };
 		DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260338237E03FF0076F63A /* SceneDelegate.swift */; };
-		DB26033B237E03FF0076F63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26033A237E03FF0076F63A /* ViewController.swift */; };
 		DB26033E237E03FF0076F63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB26033C237E03FF0076F63A /* Main.storyboard */; };
 		DB260340237E04000076F63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB26033F237E04000076F63A /* Assets.xcassets */; };
 		DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB260341237E04000076F63A /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 		DB260333237E03FF0076F63A /* BoomsetEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomsetEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB260336237E03FF0076F63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB260338237E03FF0076F63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB26033A237E03FF0076F63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB26033D237E03FF0076F63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB26033F237E04000076F63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB260342237E04000076F63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,13 +101,10 @@
 		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
 			isa = PBXGroup;
 			children = (
+				DB260372237E062A0076F63A /* Resources */,
+				DB26036E237E05C50076F63A /* AppDelegate */,
+				DB26036F237E05E80076F63A /* Storyboard */,
 				DB260367237E04650076F63A /* Modules */,
-				DB260336237E03FF0076F63A /* AppDelegate.swift */,
-				DB260338237E03FF0076F63A /* SceneDelegate.swift */,
-				DB26033A237E03FF0076F63A /* ViewController.swift */,
-				DB26033C237E03FF0076F63A /* Main.storyboard */,
-				DB26033F237E04000076F63A /* Assets.xcassets */,
-				DB260341237E04000076F63A /* LaunchScreen.storyboard */,
 				DB260344237E04000076F63A /* Info.plist */,
 			);
 			path = BoomsetEvent;
@@ -156,6 +151,32 @@
 				DB26036B237E04900076F63A /* LoginViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DB26036E237E05C50076F63A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB260336237E03FF0076F63A /* AppDelegate.swift */,
+				DB260338237E03FF0076F63A /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DB26036F237E05E80076F63A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DB26033C237E03FF0076F63A /* Main.storyboard */,
+				DB260341237E04000076F63A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DB260372237E062A0076F63A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB26033F237E04000076F63A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
-				DB26033B237E03FF0076F63A /* ViewController.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
 			);
