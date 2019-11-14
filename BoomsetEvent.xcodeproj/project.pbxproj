@@ -16,6 +16,7 @@
 		DB260359237E04010076F63A /* BoomsetEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260358237E04010076F63A /* BoomsetEventUITests.swift */; };
 		DB26036C237E04900076F63A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26036A237E04900076F63A /* LoginViewController.swift */; };
 		DB26036D237E04900076F63A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB26036B237E04900076F63A /* LoginViewController.xib */; };
+		DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260374237E0B300076F63A /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DB26035A237E04010076F63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB26036A237E04900076F63A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB26036B237E04900076F63A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		DB260374237E0B300076F63A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,10 @@
 		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
 			isa = PBXGroup;
 			children = (
-				DB260372237E062A0076F63A /* Resources */,
 				DB26036E237E05C50076F63A /* AppDelegate */,
 				DB26036F237E05E80076F63A /* Storyboard */,
+				DB260372237E062A0076F63A /* Resources */,
+				DB260373237E0B1C0076F63A /* Extensions */,
 				DB260367237E04650076F63A /* Modules */,
 				DB260344237E04000076F63A /* Info.plist */,
 			);
@@ -177,6 +180,14 @@
 				DB26033F237E04000076F63A /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB260373237E0B1C0076F63A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB260374237E0B300076F63A /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
+				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
