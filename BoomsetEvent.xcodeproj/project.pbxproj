@@ -15,6 +15,8 @@
 		DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB260341237E04000076F63A /* LaunchScreen.storyboard */; };
 		DB26034E237E04000076F63A /* BoomsetEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26034D237E04000076F63A /* BoomsetEventTests.swift */; };
 		DB260359237E04010076F63A /* BoomsetEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260358237E04010076F63A /* BoomsetEventUITests.swift */; };
+		DB26036C237E04900076F63A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26036A237E04900076F63A /* LoginViewController.swift */; };
+		DB26036D237E04900076F63A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB26036B237E04900076F63A /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DB260354237E04010076F63A /* BoomsetEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomsetEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB260358237E04010076F63A /* BoomsetEventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomsetEventUITests.swift; sourceTree = "<group>"; };
 		DB26035A237E04010076F63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB26036A237E04900076F63A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB26036B237E04900076F63A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
 			isa = PBXGroup;
 			children = (
+				DB260367237E04650076F63A /* Modules */,
 				DB260336237E03FF0076F63A /* AppDelegate.swift */,
 				DB260338237E03FF0076F63A /* SceneDelegate.swift */,
 				DB26033A237E03FF0076F63A /* ViewController.swift */,
@@ -126,6 +131,31 @@
 				DB26035A237E04010076F63A /* Info.plist */,
 			);
 			path = BoomsetEventUITests;
+			sourceTree = "<group>";
+		};
+		DB260367237E04650076F63A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DB260368237E046F0076F63A /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DB260368237E046F0076F63A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB260369237E047B0076F63A /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DB260369237E047B0076F63A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB26036A237E04900076F63A /* LoginViewController.swift */,
+				DB26036B237E04900076F63A /* LoginViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB26036D237E04900076F63A /* LoginViewController.xib in Resources */,
 				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
 				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
 				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
@@ -259,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB26033B237E03FF0076F63A /* ViewController.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
