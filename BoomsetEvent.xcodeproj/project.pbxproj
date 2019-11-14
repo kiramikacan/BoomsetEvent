@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260336237E03FF0076F63A /* AppDelegate.swift */; };
+		DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260338237E03FF0076F63A /* SceneDelegate.swift */; };
+		DB26033B237E03FF0076F63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26033A237E03FF0076F63A /* ViewController.swift */; };
+		DB26033E237E03FF0076F63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB26033C237E03FF0076F63A /* Main.storyboard */; };
+		DB260340237E04000076F63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB26033F237E04000076F63A /* Assets.xcassets */; };
+		DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB260341237E04000076F63A /* LaunchScreen.storyboard */; };
+		DB26034E237E04000076F63A /* BoomsetEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26034D237E04000076F63A /* BoomsetEventTests.swift */; };
+		DB260359237E04010076F63A /* BoomsetEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260358237E04010076F63A /* BoomsetEventUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB26034A237E04000076F63A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB26032B237E03FF0076F63A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB260332237E03FF0076F63A;
+			remoteInfo = BoomsetEvent;
+		};
+		DB260355237E04010076F63A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB26032B237E03FF0076F63A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB260332237E03FF0076F63A;
+			remoteInfo = BoomsetEvent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB260333237E03FF0076F63A /* BoomsetEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomsetEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB260336237E03FF0076F63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB260338237E03FF0076F63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB26033A237E03FF0076F63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB26033D237E03FF0076F63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB26033F237E04000076F63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB260342237E04000076F63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB260344237E04000076F63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB260349237E04000076F63A /* BoomsetEventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomsetEventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB26034D237E04000076F63A /* BoomsetEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomsetEventTests.swift; sourceTree = "<group>"; };
+		DB26034F237E04010076F63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB260354237E04010076F63A /* BoomsetEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoomsetEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB260358237E04010076F63A /* BoomsetEventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoomsetEventUITests.swift; sourceTree = "<group>"; };
+		DB26035A237E04010076F63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB260330237E03FF0076F63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260346237E04000076F63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260351237E04010076F63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB26032A237E03FF0076F63A = {
+			isa = PBXGroup;
+			children = (
+				DB260335237E03FF0076F63A /* BoomsetEvent */,
+				DB26034C237E04000076F63A /* BoomsetEventTests */,
+				DB260357237E04010076F63A /* BoomsetEventUITests */,
+				DB260334237E03FF0076F63A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB260334237E03FF0076F63A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB260333237E03FF0076F63A /* BoomsetEvent.app */,
+				DB260349237E04000076F63A /* BoomsetEventTests.xctest */,
+				DB260354237E04010076F63A /* BoomsetEventUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
+			isa = PBXGroup;
+			children = (
+				DB260336237E03FF0076F63A /* AppDelegate.swift */,
+				DB260338237E03FF0076F63A /* SceneDelegate.swift */,
+				DB26033A237E03FF0076F63A /* ViewController.swift */,
+				DB26033C237E03FF0076F63A /* Main.storyboard */,
+				DB26033F237E04000076F63A /* Assets.xcassets */,
+				DB260341237E04000076F63A /* LaunchScreen.storyboard */,
+				DB260344237E04000076F63A /* Info.plist */,
+			);
+			path = BoomsetEvent;
+			sourceTree = "<group>";
+		};
+		DB26034C237E04000076F63A /* BoomsetEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB26034D237E04000076F63A /* BoomsetEventTests.swift */,
+				DB26034F237E04010076F63A /* Info.plist */,
+			);
+			path = BoomsetEventTests;
+			sourceTree = "<group>";
+		};
+		DB260357237E04010076F63A /* BoomsetEventUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB260358237E04010076F63A /* BoomsetEventUITests.swift */,
+				DB26035A237E04010076F63A /* Info.plist */,
+			);
+			path = BoomsetEventUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB260332237E03FF0076F63A /* BoomsetEvent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB26035D237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEvent" */;
+			buildPhases = (
+				DB26032F237E03FF0076F63A /* Sources */,
+				DB260330237E03FF0076F63A /* Frameworks */,
+				DB260331237E03FF0076F63A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoomsetEvent;
+			productName = BoomsetEvent;
+			productReference = DB260333237E03FF0076F63A /* BoomsetEvent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB260348237E04000076F63A /* BoomsetEventTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB260360237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventTests" */;
+			buildPhases = (
+				DB260345237E04000076F63A /* Sources */,
+				DB260346237E04000076F63A /* Frameworks */,
+				DB260347237E04000076F63A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB26034B237E04000076F63A /* PBXTargetDependency */,
+			);
+			name = BoomsetEventTests;
+			productName = BoomsetEventTests;
+			productReference = DB260349237E04000076F63A /* BoomsetEventTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB260353237E04010076F63A /* BoomsetEventUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB260363237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventUITests" */;
+			buildPhases = (
+				DB260350237E04010076F63A /* Sources */,
+				DB260351237E04010076F63A /* Frameworks */,
+				DB260352237E04010076F63A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB260356237E04010076F63A /* PBXTargetDependency */,
+			);
+			name = BoomsetEventUITests;
+			productName = BoomsetEventUITests;
+			productReference = DB260354237E04010076F63A /* BoomsetEventUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB26032B237E03FF0076F63A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "dev krm";
+				TargetAttributes = {
+					DB260332237E03FF0076F63A = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					DB260348237E04000076F63A = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = DB260332237E03FF0076F63A;
+					};
+					DB260353237E04010076F63A = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = DB260332237E03FF0076F63A;
+					};
+				};
+			};
+			buildConfigurationList = DB26032E237E03FF0076F63A /* Build configuration list for PBXProject "BoomsetEvent" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB26032A237E03FF0076F63A;
+			productRefGroup = DB260334237E03FF0076F63A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB260332237E03FF0076F63A /* BoomsetEvent */,
+				DB260348237E04000076F63A /* BoomsetEventTests */,
+				DB260353237E04010076F63A /* BoomsetEventUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB260331237E03FF0076F63A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
+				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
+				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260347237E04000076F63A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260352237E04010076F63A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB26032F237E03FF0076F63A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB26033B237E03FF0076F63A /* ViewController.swift in Sources */,
+				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
+				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260345237E04000076F63A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB26034E237E04000076F63A /* BoomsetEventTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB260350237E04010076F63A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB260359237E04010076F63A /* BoomsetEventUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB26034B237E04000076F63A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB260332237E03FF0076F63A /* BoomsetEvent */;
+			targetProxy = DB26034A237E04000076F63A /* PBXContainerItemProxy */;
+		};
+		DB260356237E04010076F63A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB260332237E03FF0076F63A /* BoomsetEvent */;
+			targetProxy = DB260355237E04010076F63A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB26033C237E03FF0076F63A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB26033D237E03FF0076F63A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB260341237E04000076F63A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB260342237E04000076F63A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB26035B237E04010076F63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB26035C237E04010076F63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB26035E237E04010076F63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEvent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB26035F237E04010076F63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEvent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB260361237E04010076F63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEventTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEventTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoomsetEvent.app/BoomsetEvent";
+			};
+			name = Debug;
+		};
+		DB260362237E04010076F63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEventTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEventTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoomsetEvent.app/BoomsetEvent";
+			};
+			name = Release;
+		};
+		DB260364237E04010076F63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEventUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoomsetEvent;
+			};
+			name = Debug;
+		};
+		DB260365237E04010076F63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q8Q745UYS;
+				INFOPLIST_FILE = BoomsetEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devkrm.BoomsetEventUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoomsetEvent;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB26032E237E03FF0076F63A /* Build configuration list for PBXProject "BoomsetEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB26035B237E04010076F63A /* Debug */,
+				DB26035C237E04010076F63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB26035D237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB26035E237E04010076F63A /* Debug */,
+				DB26035F237E04010076F63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB260360237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB260361237E04010076F63A /* Debug */,
+				DB260362237E04010076F63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB260363237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB260364237E04010076F63A /* Debug */,
+				DB260365237E04010076F63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB26032B237E03FF0076F63A /* Project object */;
+}
