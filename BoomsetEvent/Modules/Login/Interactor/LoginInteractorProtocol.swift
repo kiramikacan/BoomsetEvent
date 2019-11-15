@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LoginViewInteractorProtocol {
+protocol LoginInteractorProtocol {
     func loginWithCredentials(username: String, password: String)
 }

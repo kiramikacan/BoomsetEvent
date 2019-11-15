@@ -8,9 +8,9 @@
 
 import Foundation
 
-class LoginViewInteractor: LoginViewInteractorProtocol {
+class LoginInteractor: LoginInteractorProtocol {
     
-    var presenter: LoginViewPresenterProtocol?
+    var presenter: LoginPresenterProtocol?
     
     private var apiWorker: LoginApiWorkerProtocol?
     

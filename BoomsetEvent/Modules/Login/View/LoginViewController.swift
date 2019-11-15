@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    var presenter: LoginViewPresenterProtocol?
+    var presenter: LoginPresenterProtocol?
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -76,8 +76,8 @@ extension LoginViewController{
     static func initViewController()->LoginViewController{
         let controller = LoginViewController(nibName: "LoginViewController", bundle: nil)
         
-        let presenter = LoginViewPresenter()
-        let iterator = LoginViewInteractor(apiWorker: LoginApiWorker())
+        let presenter = LoginPresenter()
+        let iterator = LoginInteractor(apiWorker: LoginApiWorker())
         
         presenter.view = controller
         presenter.interactor = iterator

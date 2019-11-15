@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2AF180797D50385519D0DB64 /* Pods_BoomsetEventTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EF7450BD669639BB3BC1AD /* Pods_BoomsetEventTests.framework */; };
 		714463C66CA2887F2A3B02F7 /* Pods_BoomsetEvent_BoomsetEventUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDB104DFAD908A5DC0D2BF4 /* Pods_BoomsetEvent_BoomsetEventUITests.framework */; };
-		DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */; };
+		DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15621B237EFD4E00F2A7F1 /* LoginInteractor.swift */; };
 		DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260336237E03FF0076F63A /* AppDelegate.swift */; };
 		DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260338237E03FF0076F63A /* SceneDelegate.swift */; };
 		DB26033E237E03FF0076F63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB26033C237E03FF0076F63A /* Main.storyboard */; };
@@ -28,11 +28,11 @@
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
-		DB611DB7237F319E00041BAF /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */; };
-		DB611DBC237F3DAF00041BAF /* LoginViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */; };
+		DB611DB7237F319E00041BAF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB6237F319E00041BAF /* LoginPresenter.swift */; };
+		DB611DBC237F3DAF00041BAF /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DBB237F3DAF00041BAF /* LoginPresenterProtocol.swift */; };
 		DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DBE237F415600041BAF /* LoginApiWorker.swift */; };
 		DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */; };
-		DB611DC5237F4B7700041BAF /* LoginViewInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */; };
+		DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC4237F4B7700041BAF /* LoginInteractorProtocol.swift */; };
 		DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC6237F558400041BAF /* LoginViewProtocol.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
@@ -66,7 +66,7 @@
 		82EF7450BD669639BB3BC1AD /* Pods_BoomsetEventTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoomsetEventTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A7FC3BF8E7EE4F292BD6F /* Pods-BoomsetEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEvent.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEvent/Pods-BoomsetEvent.release.xcconfig"; sourceTree = "<group>"; };
 		95E274EE31ADAD8E9CD9B73D /* Pods-BoomsetEventTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEventTests.debug.xcconfig"; path = "Target Support Files/Pods-BoomsetEventTests/Pods-BoomsetEventTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractor.swift; sourceTree = "<group>"; };
+		DB15621B237EFD4E00F2A7F1 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		DB260333237E03FF0076F63A /* BoomsetEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomsetEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB260336237E03FF0076F63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB260338237E03FF0076F63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,11 +91,11 @@
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
-		DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
-		DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		DB611DB6237F319E00041BAF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		DB611DBB237F3DAF00041BAF /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		DB611DBE237F415600041BAF /* LoginApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiWorker.swift; sourceTree = "<group>"; };
 		DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiWorkerProtocol.swift; sourceTree = "<group>"; };
-		DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorProtocol.swift; sourceTree = "<group>"; };
+		DB611DC4237F4B7700041BAF /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		DB611DC6237F558400041BAF /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 		DB15621A237EFD1700F2A7F1 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */,
-				DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */,
+				DB15621B237EFD4E00F2A7F1 /* LoginInteractor.swift */,
+				DB611DC4237F4B7700041BAF /* LoginInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -315,8 +315,8 @@
 		DB611DB5237F315600041BAF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */,
-				DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */,
+				DB611DB6237F319E00041BAF /* LoginPresenter.swift */,
+				DB611DBB237F3DAF00041BAF /* LoginPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -591,14 +591,14 @@
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
-				DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */,
+				DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */,
 				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
 				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
 				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */,
 				DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */,
-				DB611DBC237F3DAF00041BAF /* LoginViewPresenterProtocol.swift in Sources */,
+				DB611DBC237F3DAF00041BAF /* LoginPresenterProtocol.swift in Sources */,
 				DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */,
 				DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
@@ -608,8 +608,8 @@
 				DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */,
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
 				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
-				DB611DB7237F319E00041BAF /* LoginViewPresenter.swift in Sources */,
-				DB611DC5237F4B7700041BAF /* LoginViewInteractorProtocol.swift in Sources */,
+				DB611DB7237F319E00041BAF /* LoginPresenter.swift in Sources */,
+				DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

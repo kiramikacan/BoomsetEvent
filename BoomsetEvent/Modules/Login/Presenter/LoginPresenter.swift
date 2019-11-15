@@ -8,10 +8,10 @@
 
 import Foundation
 
-class LoginViewPresenter: LoginViewPresenterProtocol {
+class LoginPresenter: LoginPresenterProtocol {
 
     var view: LoginViewProtocol?
-    var interactor: LoginViewInteractorProtocol?
+    var interactor: LoginInteractorProtocol?
     
     func startLoginWithCredentials(username: String, password: String) {
         
@@ -24,7 +24,7 @@ class LoginViewPresenter: LoginViewPresenterProtocol {
         interactor?.loginWithCredentials(username: username, password: password)
     }
     
-    func interactor(_ interactor: LoginViewInteractorProtocol, didSuccessWith user: User) {
+    func interactor(_ interactor: LoginInteractorProtocol, didSuccessWith user: User) {
         // persist user - save user token to the keychain
         UserService.shared.setUserToken(user.token)
         
@@ -32,7 +32,7 @@ class LoginViewPresenter: LoginViewPresenterProtocol {
         view?.gotoEvents()
     }
     
-    func interactor(_ interactor: LoginViewInteractorProtocol, didFailWith error: ApiErrorModel) {
+    func interactor(_ interactor: LoginInteractorProtocol, didFailWith error: ApiErrorModel) {
         view?.closeProggress()
         view?.showErrorMessage()
     }

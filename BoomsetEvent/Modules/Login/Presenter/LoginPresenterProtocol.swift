@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol LoginViewPresenterProtocol: class {
+protocol LoginPresenterProtocol: class {
     func startLoginWithCredentials(username: String, password: String)
     
-    func interactor(_ interactor: LoginViewInteractorProtocol, didSuccessWith user: User)
-    func interactor(_ interactor: LoginViewInteractorProtocol, didFailWith error: ApiErrorModel)
+    func interactor(_ interactor: LoginInteractorProtocol, didSuccessWith user: User)
+    func interactor(_ interactor: LoginInteractorProtocol, didFailWith error: ApiErrorModel)
     
 }
