@@ -26,6 +26,14 @@
 		DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA4237F04490082C86E /* ApiErrorModel.swift */; };
 		DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
+		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
+		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
+		DB611DB7237F319E00041BAF /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */; };
+		DB611DBC237F3DAF00041BAF /* LoginViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */; };
+		DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DBE237F415600041BAF /* LoginApiWorker.swift */; };
+		DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */; };
+		DB611DC5237F4B7700041BAF /* LoginViewInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */; };
+		DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC6237F558400041BAF /* LoginViewProtocol.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
@@ -81,6 +89,14 @@
 		DB48CAA4237F04490082C86E /* ApiErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorModel.swift; sourceTree = "<group>"; };
 		DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHttpStatusCode.swift; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		DB611DBE237F415600041BAF /* LoginApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiWorker.swift; sourceTree = "<group>"; };
+		DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiWorkerProtocol.swift; sourceTree = "<group>"; };
+		DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractorProtocol.swift; sourceTree = "<group>"; };
+		DB611DC6237F558400041BAF /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -142,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */,
+				DB611DC4237F4B7700041BAF /* LoginViewInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 		DB260367237E04650076F63A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DB611DAF237F2F2600041BAF /* Events */,
 				DB260368237E046F0076F63A /* Login */,
 			);
 			path = Modules;
@@ -224,7 +242,9 @@
 		DB260368237E046F0076F63A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DB611DBD237F412A00041BAF /* Worker */,
 				DB15621A237EFD1700F2A7F1 /* Interactor */,
+				DB611DB5237F315600041BAF /* Presenter */,
 				DB260369237E047B0076F63A /* View */,
 			);
 			path = Login;
@@ -235,6 +255,7 @@
 			children = (
 				DB26036B237E04900076F63A /* LoginViewController.xib */,
 				DB26036A237E04900076F63A /* LoginViewController.swift */,
+				DB611DC6237F558400041BAF /* LoginViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +293,41 @@
 				DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB611DAF237F2F2600041BAF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				DB611DB0237F2F6500041BAF /* View */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		DB611DB0237F2F6500041BAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB611DB2237F2F8400041BAF /* EventsViewController.xib */,
+				DB611DB1237F2F8400041BAF /* EventsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB611DB5237F315600041BAF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB611DB6237F319E00041BAF /* LoginViewPresenter.swift */,
+				DB611DBB237F3DAF00041BAF /* LoginViewPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DB611DBD237F412A00041BAF /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				DB611DBE237F415600041BAF /* LoginApiWorker.swift */,
+				DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		DBFE08FD237F192A00F1B2B0 /* Services */ = {
@@ -402,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26036D237E04900076F63A /* LoginViewController.xib in Resources */,
+				DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */,
 				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
 				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
 				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
@@ -535,9 +592,13 @@
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */,
+				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
 				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
 				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
+				DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */,
+				DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */,
+				DB611DBC237F3DAF00041BAF /* LoginViewPresenterProtocol.swift in Sources */,
 				DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */,
 				DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
@@ -546,6 +607,9 @@
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
 				DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */,
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
+				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
+				DB611DB7237F319E00041BAF /* LoginViewPresenter.swift in Sources */,
+				DB611DC5237F4B7700041BAF /* LoginViewInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

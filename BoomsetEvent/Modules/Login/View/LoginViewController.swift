@@ -10,32 +10,24 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    let interactor = LoginViewInteractor()
+    var presenter: LoginViewPresenterProtocol?
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func onLoginButtonTapped(_ sender: Any) {
-        
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        
-        if username.isEmpty || password.isEmpty {
-            self.showWarningMessage(message: "Username or password may not be blank!")
-            return
-        }
-        
-        self.displayProgress()
-        interactor.loginWithCredentials(username: username, password: password) { (result) in
-            self.dismissProgress()
-            switch result {
-            case .Success (_):
-                print("success")
-            case.Failure(let error):
-                print(error.message)
-                self.showErrorMessage(message: "Username or password incorrect!")
-            }
+
+        presenter?.startLoginWithCredentials(username: username, password: password)
+    }
+    
+    func onLoginSuccess(user: User?) {
+        if let user = user {
+            print("User successfuly logged in with Token: \(user.token)")
+        } else {
+            print("User successfuly logged in with missing Token")
         }
     }
     
@@ -52,10 +44,46 @@ class LoginViewController: UIViewController {
 
 }
 
+extension LoginViewController: LoginViewProtocol {
+    
+    func gotoEvents() {
+        let vc = EventsViewController.initViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: false, completion: nil)
+    }
+    
+    func showProggress() {
+        self.displayProgress()
+    }
+    
+    func closeProggress() {
+        self.dismissProgress()
+    }
+
+    func showWarningMessage() {
+        self.showWarningMessage(message: "Username or password may not be blank!")
+    }
+    
+    func showErrorMessage() {
+        self.showErrorMessage(message: "Username or password incorrect!")
+    }
+
+}
+
 //MARK: - Init Methods
 extension LoginViewController{
     static func initViewController()->LoginViewController{
         let controller = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        
+        let presenter = LoginViewPresenter()
+        let iterator = LoginViewInteractor(apiWorker: LoginApiWorker())
+        
+        presenter.view = controller
+        presenter.interactor = iterator
+        iterator.presenter = presenter
+        controller.presenter = presenter
+        
         return controller
     }
 }

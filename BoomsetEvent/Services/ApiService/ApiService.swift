@@ -78,10 +78,8 @@ class ApiService {
         ] // Expect JSON from API
         
         // Passed user token in header for all requests if user us authenticated
-        if let user = UserService.shared.getAuthenticatedUser() {
-            if user.token.isEmpty == false {
-                headers["Authorization"] = "Token \(user.token)"
-            }
+        if let token = UserService.shared.getUserToken(), token.isEmpty == false {
+            headers["Authorization"] = "Token \(token)"
         }
         
         return headers

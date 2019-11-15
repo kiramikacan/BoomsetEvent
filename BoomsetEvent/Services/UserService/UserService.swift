@@ -15,8 +15,16 @@ class UserService {
     // To make sure that this class cannot be instantiated outside
     private init() {}
     
+    private let keyToken = "UserToken"
     
-    func getAuthenticatedUser() -> User? {
-        return nil
+    func setUserToken(_ token: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(token, forKey: self.keyToken)
+    }
+    
+    func getUserToken() -> String? {
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: self.keyToken)
+        return token
     }
 }
