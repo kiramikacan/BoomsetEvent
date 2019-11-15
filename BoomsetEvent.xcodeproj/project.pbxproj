@@ -107,7 +107,6 @@
 				95E274EE31ADAD8E9CD9B73D /* Pods-BoomsetEventTests.debug.xcconfig */,
 				FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -635,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q8Q745UYS;
 				INFOPLIST_FILE = BoomsetEvent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q8Q745UYS;
 				INFOPLIST_FILE = BoomsetEvent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
