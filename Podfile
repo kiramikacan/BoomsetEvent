@@ -6,6 +6,7 @@ target 'BoomsetEvent' do
   use_frameworks!
 
   # Pods for BoomsetEvent
+  pod 'Alamofire'
 
   target 'BoomsetEventTests' do
     inherit! :search_paths
