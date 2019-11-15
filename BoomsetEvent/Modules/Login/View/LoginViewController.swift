@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
 
 }
 
-//MARK: Init Methods
+//MARK: - Init Methods
 extension LoginViewController{
     static func initViewController()->LoginViewController{
         let controller = LoginViewController(nibName: "LoginViewController", bundle: nil)

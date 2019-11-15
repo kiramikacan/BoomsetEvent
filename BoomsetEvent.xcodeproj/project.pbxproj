@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */; };
 		DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260336237E03FF0076F63A /* AppDelegate.swift */; };
 		DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260338237E03FF0076F63A /* SceneDelegate.swift */; };
 		DB26033E237E03FF0076F63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB26033C237E03FF0076F63A /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractor.swift; sourceTree = "<group>"; };
 		DB260333237E03FF0076F63A /* BoomsetEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomsetEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB260336237E03FF0076F63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB260338237E03FF0076F63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB15621A237EFD1700F2A7F1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DB15621D237EFDAD00F2A7F1 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
 		DB26032A237E03FF0076F63A = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +125,7 @@
 				DB260372237E062A0076F63A /* Resources */,
 				DB260373237E0B1C0076F63A /* Extensions */,
 				DB260367237E04650076F63A /* Modules */,
+				DB15621D237EFDAD00F2A7F1 /* ApiService */,
 				DB260344237E04000076F63A /* Info.plist */,
 			);
 			path = BoomsetEvent;
@@ -142,6 +160,7 @@
 		DB260368237E046F0076F63A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DB15621A237EFD1700F2A7F1 /* Interactor */,
 				DB260369237E047B0076F63A /* View */,
 			);
 			path = Login;
@@ -323,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
+				DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
