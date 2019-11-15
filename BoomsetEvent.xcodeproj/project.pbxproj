@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF180797D50385519D0DB64 /* Pods_BoomsetEventTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82EF7450BD669639BB3BC1AD /* Pods_BoomsetEventTests.framework */; };
+		714463C66CA2887F2A3B02F7 /* Pods_BoomsetEvent_BoomsetEventUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDB104DFAD908A5DC0D2BF4 /* Pods_BoomsetEvent_BoomsetEventUITests.framework */; };
 		DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */; };
 		DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260336237E03FF0076F63A /* AppDelegate.swift */; };
 		DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260338237E03FF0076F63A /* SceneDelegate.swift */; };
@@ -18,6 +20,7 @@
 		DB26036C237E04900076F63A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26036A237E04900076F63A /* LoginViewController.swift */; };
 		DB26036D237E04900076F63A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB26036B237E04900076F63A /* LoginViewController.xib */; };
 		DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260374237E0B300076F63A /* UIView+Extensions.swift */; };
+		FEBE7DD47D869E4E5D918052 /* Pods_BoomsetEvent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA45A8DFFC33D3FFC8B780B /* Pods_BoomsetEvent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BDB104DFAD908A5DC0D2BF4 /* Pods_BoomsetEvent_BoomsetEventUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoomsetEvent_BoomsetEventUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B049C54B55D1A4E2ABDC37 /* Pods-BoomsetEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEvent.debug.xcconfig"; path = "Target Support Files/Pods-BoomsetEvent/Pods-BoomsetEvent.debug.xcconfig"; sourceTree = "<group>"; };
+		1846D503861251DF35444019 /* Pods-BoomsetEvent-BoomsetEventUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEvent-BoomsetEventUITests.debug.xcconfig"; path = "Target Support Files/Pods-BoomsetEvent-BoomsetEventUITests/Pods-BoomsetEvent-BoomsetEventUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B77B9F423A7147FA10A2030 /* Pods-BoomsetEvent-BoomsetEventUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEvent-BoomsetEventUITests.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEvent-BoomsetEventUITests/Pods-BoomsetEvent-BoomsetEventUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BA45A8DFFC33D3FFC8B780B /* Pods_BoomsetEvent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoomsetEvent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82EF7450BD669639BB3BC1AD /* Pods_BoomsetEventTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoomsetEventTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849A7FC3BF8E7EE4F292BD6F /* Pods-BoomsetEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEvent.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEvent/Pods-BoomsetEvent.release.xcconfig"; sourceTree = "<group>"; };
+		95E274EE31ADAD8E9CD9B73D /* Pods-BoomsetEventTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEventTests.debug.xcconfig"; path = "Target Support Files/Pods-BoomsetEventTests/Pods-BoomsetEventTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB15621B237EFD4E00F2A7F1 /* LoginViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractor.swift; sourceTree = "<group>"; };
 		DB260333237E03FF0076F63A /* BoomsetEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomsetEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB260336237E03FF0076F63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +66,7 @@
 		DB26036A237E04900076F63A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB26036B237E04900076F63A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DB260374237E0B300076F63A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEventTests.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEventTests/Pods-BoomsetEventTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBE7DD47D869E4E5D918052 /* Pods_BoomsetEvent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF180797D50385519D0DB64 /* Pods_BoomsetEventTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714463C66CA2887F2A3B02F7 /* Pods_BoomsetEvent_BoomsetEventUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		830E934E0882A219FDF89AD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13B049C54B55D1A4E2ABDC37 /* Pods-BoomsetEvent.debug.xcconfig */,
+				849A7FC3BF8E7EE4F292BD6F /* Pods-BoomsetEvent.release.xcconfig */,
+				1846D503861251DF35444019 /* Pods-BoomsetEvent-BoomsetEventUITests.debug.xcconfig */,
+				3B77B9F423A7147FA10A2030 /* Pods-BoomsetEvent-BoomsetEventUITests.release.xcconfig */,
+				95E274EE31ADAD8E9CD9B73D /* Pods-BoomsetEventTests.debug.xcconfig */,
+				FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B621FB091A271A93496939CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BA45A8DFFC33D3FFC8B780B /* Pods_BoomsetEvent.framework */,
+				0BDB104DFAD908A5DC0D2BF4 /* Pods_BoomsetEvent_BoomsetEventUITests.framework */,
+				82EF7450BD669639BB3BC1AD /* Pods_BoomsetEventTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB15621A237EFD1700F2A7F1 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +143,8 @@
 				DB26034C237E04000076F63A /* BoomsetEventTests */,
 				DB260357237E04010076F63A /* BoomsetEventUITests */,
 				DB260334237E03FF0076F63A /* Products */,
+				830E934E0882A219FDF89AD1 /* Pods */,
+				B621FB091A271A93496939CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB26035D237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEvent" */;
 			buildPhases = (
+				6FECC3863FDF222321B52E8D /* [CP] Check Pods Manifest.lock */,
 				DB26032F237E03FF0076F63A /* Sources */,
 				DB260330237E03FF0076F63A /* Frameworks */,
 				DB260331237E03FF0076F63A /* Resources */,
@@ -233,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB260360237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventTests" */;
 			buildPhases = (
+				C63F17661A998B86BBDE52B7 /* [CP] Check Pods Manifest.lock */,
 				DB260345237E04000076F63A /* Sources */,
 				DB260346237E04000076F63A /* Frameworks */,
 				DB260347237E04000076F63A /* Resources */,
@@ -251,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB260363237E04010076F63A /* Build configuration list for PBXNativeTarget "BoomsetEventUITests" */;
 			buildPhases = (
+				E293776EA57AEC3BC5239B12 /* [CP] Check Pods Manifest.lock */,
 				DB260350237E04010076F63A /* Sources */,
 				DB260351237E04010076F63A /* Frameworks */,
 				DB260352237E04010076F63A /* Resources */,
@@ -335,6 +379,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FECC3863FDF222321B52E8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoomsetEvent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C63F17661A998B86BBDE52B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoomsetEventTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E293776EA57AEC3BC5239B12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoomsetEvent-BoomsetEventUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB26032F237E03FF0076F63A /* Sources */ = {
@@ -516,6 +629,7 @@
 		};
 		DB26035E237E04010076F63A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13B049C54B55D1A4E2ABDC37 /* Pods-BoomsetEvent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +648,7 @@
 		};
 		DB26035F237E04010076F63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849A7FC3BF8E7EE4F292BD6F /* Pods-BoomsetEvent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +667,7 @@
 		};
 		DB260361237E04010076F63A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E274EE31ADAD8E9CD9B73D /* Pods-BoomsetEventTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -574,6 +690,7 @@
 		};
 		DB260362237E04010076F63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +713,7 @@
 		};
 		DB260364237E04010076F63A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1846D503861251DF35444019 /* Pods-BoomsetEvent-BoomsetEventUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +734,7 @@
 		};
 		DB260365237E04010076F63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B77B9F423A7147FA10A2030 /* Pods-BoomsetEvent-BoomsetEventUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
