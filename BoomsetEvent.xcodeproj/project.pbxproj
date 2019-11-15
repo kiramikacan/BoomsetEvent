@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,15 @@
 		DB26036C237E04900076F63A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26036A237E04900076F63A /* LoginViewController.swift */; };
 		DB26036D237E04900076F63A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB26036B237E04900076F63A /* LoginViewController.xib */; };
 		DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB260374237E0B300076F63A /* UIView+Extensions.swift */; };
+		DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CA9E237F03CB0082C86E /* ApiService.swift */; };
+		DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA0237F040E0082C86E /* EApiErrorType.swift */; };
+		DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA2237F04300082C86E /* ECallbackResultType.swift */; };
+		DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA4237F04490082C86E /* ApiErrorModel.swift */; };
+		DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */; };
+		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
+		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
+		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
+		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
 		FEBE7DD47D869E4E5D918052 /* Pods_BoomsetEvent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA45A8DFFC33D3FFC8B780B /* Pods_BoomsetEvent.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +75,15 @@
 		DB26036A237E04900076F63A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB26036B237E04900076F63A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DB260374237E0B300076F63A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DB48CA9E237F03CB0082C86E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		DB48CAA0237F040E0082C86E /* EApiErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EApiErrorType.swift; sourceTree = "<group>"; };
+		DB48CAA2237F04300082C86E /* ECallbackResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECallbackResultType.swift; sourceTree = "<group>"; };
+		DB48CAA4237F04490082C86E /* ApiErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorModel.swift; sourceTree = "<group>"; };
+		DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHttpStatusCode.swift; sourceTree = "<group>"; };
+		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEventTests.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEventTests/Pods-BoomsetEventTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +149,11 @@
 		DB15621D237EFDAD00F2A7F1 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				DB48CA9E237F03CB0082C86E /* ApiService.swift */,
+				DB48CAA4237F04490082C86E /* ApiErrorModel.swift */,
+				DB48CAA0237F040E0082C86E /* EApiErrorType.swift */,
+				DB48CAA2237F04300082C86E /* ECallbackResultType.swift */,
+				DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -164,9 +187,10 @@
 				DB26036F237E05E80076F63A /* Storyboard */,
 				DB260372237E062A0076F63A /* Resources */,
 				DB260373237E0B1C0076F63A /* Extensions */,
+				DBFE08FD237F192A00F1B2B0 /* Services */,
 				DB260367237E04650076F63A /* Modules */,
-				DB15621D237EFDAD00F2A7F1 /* ApiService */,
 				DB260344237E04000076F63A /* Info.plist */,
+				DBFE0903237F1C0900F1B2B0 /* Config.swift */,
 			);
 			path = BoomsetEvent;
 			sourceTree = "<group>";
@@ -209,8 +233,8 @@
 		DB260369237E047B0076F63A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DB26036A237E04900076F63A /* LoginViewController.swift */,
 				DB26036B237E04900076F63A /* LoginViewController.xib */,
+				DB26036A237E04900076F63A /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,8 +269,27 @@
 			isa = PBXGroup;
 			children = (
 				DB260374237E0B300076F63A /* UIView+Extensions.swift */,
+				DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DBFE08FD237F192A00F1B2B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE08FE237F193E00F1B2B0 /* UserService */,
+				DB15621D237EFDAD00F2A7F1 /* ApiService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DBFE08FE237F193E00F1B2B0 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE08FF237F194800F1B2B0 /* UserService.swift */,
+				DBFE0901237F19CC00F1B2B0 /* User.swift */,
+			);
+			path = UserService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,10 +533,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
+				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginViewInteractor.swift in Sources */,
+				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
+				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
+				DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */,
+				DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
+				DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */,
+				DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
+				DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */,
+				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

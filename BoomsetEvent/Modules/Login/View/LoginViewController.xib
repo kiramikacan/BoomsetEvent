@@ -27,28 +27,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-SD-pMO">
-                    <rect key="frame" x="60" y="241" width="294" height="34"/>
+                    <rect key="frame" x="60" y="241" width="294" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="yGF-2o-RNb"/>
+                        <constraint firstAttribute="height" constant="40" id="yGF-2o-RNb"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHg-Je-aQ9">
-                    <rect key="frame" x="60" y="285" width="294" height="34"/>
+                    <rect key="frame" x="60" y="291" width="294" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="Ge8-Qn-hHt"/>
+                        <constraint firstAttribute="height" constant="40" id="Ge8-Qn-hHt"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZh-CV-ja1">
-                    <rect key="frame" x="60" y="349" width="294" height="34"/>
+                    <rect key="frame" x="60" y="361" width="294" height="40"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="tyt-4l-ka3"/>
+                        <constraint firstAttribute="height" constant="40" id="tyt-4l-ka3"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                     <state key="normal" title="Login">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

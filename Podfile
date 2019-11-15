@@ -7,7 +7,9 @@ target 'BoomsetEvent' do
 
   # Pods for BoomsetEvent
   pod 'Alamofire'
-
+  pod 'SwiftyJSON'
+  pod 'MBProgressHUD'
+  
   target 'BoomsetEventTests' do
     inherit! :search_paths
     # Pods for testing
