@@ -20,8 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = LoginViewController.initViewController()
-        window?.makeKeyAndVisible()
+        
+        if UserService.shared.isUserAuthenticated() {
+            window?.rootViewController = EventsViewController.initViewController()
+            window?.makeKeyAndVisible()
+        } else {
+            window?.rootViewController = LoginViewController.initViewController()
+            window?.makeKeyAndVisible()
+        }
         
     }
 

@@ -27,4 +27,10 @@ class UserService {
         let token = defaults.string(forKey: self.keyToken)
         return token
     }
+    
+    func isUserAuthenticated() -> Bool {
+        let token = getUserToken()
+        return token != nil
+    }
+    
 }
