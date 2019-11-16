@@ -8,10 +8,16 @@
 
 import Foundation
 
-class EventsPresenter: EventsPresenterProtocol {
-    
+class EventsPresenter {
     var view: EventsViewProtocol?
     var interactor: EventsInteractorProtocol?
+}
+
+extension EventsPresenter: EventsPresenterProtocol {
+    
+    func handleEventSelection() {
+        view?.gotoGuests()
+    }
     
     func fetchEvents() {
         view?.showProggress()

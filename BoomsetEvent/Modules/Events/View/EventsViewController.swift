@@ -93,4 +93,8 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.handleEventSelection()
+    }
+    
 }
