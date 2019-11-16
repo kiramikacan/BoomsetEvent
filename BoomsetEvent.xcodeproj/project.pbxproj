@@ -27,6 +27,7 @@
 		DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */; };
 		DB4D4C92237FF11A004AAFAE /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */; };
 		DB4D4C93237FF11A004AAFAE /* GuestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */; };
+		DB4D4C95237FF641004AAFAE /* Collection+SafeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C94237FF641004AAFAE /* Collection+SafeCheck.swift */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
@@ -104,6 +105,7 @@
 		DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHttpStatusCode.swift; sourceTree = "<group>"; };
 		DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
 		DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestsViewController.xib; sourceTree = "<group>"; };
+		DB4D4C94237FF641004AAFAE /* Collection+SafeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeCheck.swift"; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				DB260374237E0B300076F63A /* UIView+Extensions.swift */,
 				DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */,
+				DB4D4C94237FF641004AAFAE /* Collection+SafeCheck.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */,
 				DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */,
+				DB4D4C95237FF641004AAFAE /* Collection+SafeCheck.swift in Sources */,
 				DB82BD54237F6A62000B8D21 /* EventsInteractorProtocol.swift in Sources */,
 				DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */,
 				DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */,
