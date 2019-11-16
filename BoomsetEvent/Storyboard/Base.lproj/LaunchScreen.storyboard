@@ -15,18 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boomset Event Application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-bh-eU0">
-                                <rect key="frame" x="30" y="401.5" width="354" height="93.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boomset" translatesAutoresizingMaskIntoConstraints="NO" id="hqS-Gd-OQ7">
+                                <rect key="frame" x="8" y="-52" width="398" height="1000"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fBV-bh-eU0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="Boj-yP-kjP"/>
-                            <constraint firstAttribute="trailing" secondItem="fBV-bh-eU0" secondAttribute="trailing" constant="30" id="LS0-ZA-6lC"/>
-                            <constraint firstItem="fBV-bh-eU0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ule-iA-Ewd"/>
+                            <constraint firstItem="hqS-Gd-OQ7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="EOE-WZ-v6C"/>
+                            <constraint firstItem="hqS-Gd-OQ7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="8" id="FPh-tN-lLL"/>
+                            <constraint firstAttribute="trailing" secondItem="hqS-Gd-OQ7" secondAttribute="trailing" constant="8" id="nk6-Jo-ig8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,4 +33,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="boomset" width="1000" height="1000"/>
+    </resources>
 </document>
