@@ -9,7 +9,7 @@
 import Foundation
 
 protocol EventsViewProtocol {
-    func setEventModels(_ events: [EventViewModel])
+    func showEventModels(_ events: [EventViewModel])
     func showProggress()
     func closeProggress()
 }

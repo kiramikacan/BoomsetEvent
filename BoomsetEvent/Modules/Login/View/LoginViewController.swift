@@ -8,6 +8,24 @@
 
 import UIKit
 
+//MARK: - Init Methods
+extension LoginViewController{
+    static func initViewController()->LoginViewController{
+        let controller = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        
+        let presenter = LoginPresenter()
+        let iterator = LoginInteractor(apiWorker: LoginApiWorker())
+        
+        presenter.view = controller
+        presenter.interactor = iterator
+        iterator.presenter = presenter
+        controller.presenter = presenter
+        
+        return controller
+    }
+}
+
+//MARK: - Class Base Methods & Properties
 class LoginViewController: UIViewController {
 
     var presenter: LoginPresenterProtocol?
@@ -44,6 +62,7 @@ class LoginViewController: UIViewController {
 
 }
 
+//MARK: - Protocol Methods
 extension LoginViewController: LoginViewProtocol {
     
     func gotoEvents() {
@@ -69,21 +88,4 @@ extension LoginViewController: LoginViewProtocol {
         self.showErrorMessage(message: "Username or password incorrect!")
     }
 
-}
-
-//MARK: - Init Methods
-extension LoginViewController{
-    static func initViewController()->LoginViewController{
-        let controller = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        
-        let presenter = LoginPresenter()
-        let iterator = LoginInteractor(apiWorker: LoginApiWorker())
-        
-        presenter.view = controller
-        presenter.interactor = iterator
-        iterator.presenter = presenter
-        controller.presenter = presenter
-        
-        return controller
-    }
 }

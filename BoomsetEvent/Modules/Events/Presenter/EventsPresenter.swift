@@ -26,7 +26,7 @@ class EventsPresenter: EventsPresenterProtocol {
             eventModels.append(EventViewModel(event: event))
         }
         
-        view?.setEventModels(eventModels)
+        view?.showEventModels(eventModels)
         view?.closeProggress()
     }
     

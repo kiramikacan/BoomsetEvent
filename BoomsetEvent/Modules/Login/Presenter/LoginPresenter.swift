@@ -25,7 +25,7 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func interactor(_ interactor: LoginInteractorProtocol, didSuccessWith data: User) {
-        // persist user - save user token to the keychain
+        // persist user - save user token to the UserDefaults or Keychain
         UserService.shared.setUserToken(data.token)
         
         view?.closeProggress()

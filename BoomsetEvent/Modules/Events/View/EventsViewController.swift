@@ -8,6 +8,25 @@
 
 import UIKit
 
+//MARK: - Init Methods
+extension EventsViewController{
+    static func initViewController()->UINavigationController{
+        let controller = EventsViewController(nibName: "EventsViewController", bundle: nil)
+        let navController = UINavigationController(rootViewController: controller)
+        
+        let presenter = EventsPresenter()
+        let iterator = EventsInteractor(apiWorker: EventsApiWorker())
+        
+        presenter.view = controller
+        presenter.interactor = iterator
+        iterator.presenter = presenter
+        controller.presenter = presenter
+        
+        return navController
+    }
+}
+
+//MARK: - Class Base Methods & Properties
 class EventsViewController: UIViewController {
 
     var eventModels = [EventViewModel]()
@@ -35,9 +54,10 @@ class EventsViewController: UIViewController {
 
 }
 
+//MARK: - Protocol Methods
 extension EventsViewController: EventsViewProtocol {
     
-    func setEventModels(_ eventModels: [EventViewModel]) {
+    func showEventModels(_ eventModels: [EventViewModel]) {
         self.eventModels = eventModels
         self.tableView.reloadData()
     }
@@ -52,26 +72,7 @@ extension EventsViewController: EventsViewProtocol {
     
 }
 
-//MARK: - Init Methods
-extension EventsViewController{
-    static func initViewController()->UINavigationController{
-        let controller = EventsViewController(nibName: "EventsViewController", bundle: nil)
-        let navController = UINavigationController(rootViewController: controller)
-        
-        let presenter = EventsPresenter()
-        let iterator = EventsInteractor(apiWorker: EventsApiWorker())
-        
-        presenter.view = controller
-        presenter.interactor = iterator
-        iterator.presenter = presenter
-        controller.presenter = presenter
-        
-        return navController
-    }
-}
-
 //MARK: - TableView DataSource&Delegate Methods
-
 extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
