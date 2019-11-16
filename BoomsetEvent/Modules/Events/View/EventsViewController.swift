@@ -57,6 +57,11 @@ class EventsViewController: UIViewController {
 //MARK: - Protocol Methods
 extension EventsViewController: EventsViewProtocol {
     
+    func gotoGuests() {
+        let vc = GuestsViewController.initViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func showEventModels(_ eventModels: [EventViewModel]) {
         self.eventModels = eventModels
         self.tableView.reloadData()
