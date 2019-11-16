@@ -23,10 +23,10 @@ struct Config {
     }
     
     static var ApiBaseUrl: String {
-        let mBaseUrl = "https://www.boomset.com"
+        let mBaseUrl = "https://api.boomset.com"
         /*
         if isDebug {
-            mBaseUrl = "http://dev.boomset.com" // should be ?
+            mBaseUrl = "http://api.dev.boomset.com" // should be ?
         }
         */
         return mBaseUrl

@@ -34,6 +34,15 @@
 		DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */; };
 		DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC4237F4B7700041BAF /* LoginInteractorProtocol.swift */; };
 		DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DC6237F558400041BAF /* LoginViewProtocol.swift */; };
+		DB82BD4D237F6971000B8D21 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD4C237F6971000B8D21 /* EventsPresenter.swift */; };
+		DB82BD4F237F6984000B8D21 /* EventsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD4E237F6984000B8D21 /* EventsPresenterProtocol.swift */; };
+		DB82BD52237F6A55000B8D21 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD51237F6A55000B8D21 /* EventsInteractor.swift */; };
+		DB82BD54237F6A62000B8D21 /* EventsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD53237F6A62000B8D21 /* EventsInteractorProtocol.swift */; };
+		DB82BD57237F6ABD000B8D21 /* EventsApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD56237F6ABD000B8D21 /* EventsApiWorker.swift */; };
+		DB82BD59237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD58237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift */; };
+		DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD5C237F6CA0000B8D21 /* Event.swift */; };
+		DB82BD5F237F6D2C000B8D21 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD5E237F6D2C000B8D21 /* EventResponse.swift */; };
+		DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
@@ -97,6 +106,15 @@
 		DB611DC2237F4B0400041BAF /* LoginApiWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiWorkerProtocol.swift; sourceTree = "<group>"; };
 		DB611DC4237F4B7700041BAF /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		DB611DC6237F558400041BAF /* LoginViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		DB82BD4C237F6971000B8D21 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		DB82BD4E237F6984000B8D21 /* EventsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenterProtocol.swift; sourceTree = "<group>"; };
+		DB82BD51237F6A55000B8D21 /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		DB82BD53237F6A62000B8D21 /* EventsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractorProtocol.swift; sourceTree = "<group>"; };
+		DB82BD56237F6ABD000B8D21 /* EventsApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApiWorker.swift; sourceTree = "<group>"; };
+		DB82BD58237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApiWorkerProtocol.swift; sourceTree = "<group>"; };
+		DB82BD5C237F6CA0000B8D21 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DB82BD5E237F6D2C000B8D21 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
+		DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewProtocol.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -242,6 +260,7 @@
 		DB260368237E046F0076F63A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DB82BD5B237F6C88000B8D21 /* Entity */,
 				DB611DBD237F412A00041BAF /* Worker */,
 				DB15621A237EFD1700F2A7F1 /* Interactor */,
 				DB611DB5237F315600041BAF /* Presenter */,
@@ -298,6 +317,10 @@
 		DB611DAF237F2F2600041BAF /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				DB82BD5A237F6C73000B8D21 /* Entity */,
+				DB82BD55237F6AA6000B8D21 /* Worker */,
+				DB82BD50237F6A43000B8D21 /* Interactor */,
+				DB82BD4B237F695C000B8D21 /* Presenter */,
 				DB611DB0237F2F6500041BAF /* View */,
 			);
 			path = Events;
@@ -308,6 +331,7 @@
 			children = (
 				DB611DB2237F2F8400041BAF /* EventsViewController.xib */,
 				DB611DB1237F2F8400041BAF /* EventsViewController.swift */,
+				DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +354,50 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
+		DB82BD4B237F695C000B8D21 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD4C237F6971000B8D21 /* EventsPresenter.swift */,
+				DB82BD4E237F6984000B8D21 /* EventsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DB82BD50237F6A43000B8D21 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD51237F6A55000B8D21 /* EventsInteractor.swift */,
+				DB82BD53237F6A62000B8D21 /* EventsInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DB82BD55237F6AA6000B8D21 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD56237F6ABD000B8D21 /* EventsApiWorker.swift */,
+				DB82BD58237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		DB82BD5A237F6C73000B8D21 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD5C237F6CA0000B8D21 /* Event.swift */,
+				DB82BD5E237F6D2C000B8D21 /* EventResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB82BD5B237F6C88000B8D21 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DBFE0901237F19CC00F1B2B0 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		DBFE08FD237F192A00F1B2B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,7 +411,6 @@
 			isa = PBXGroup;
 			children = (
 				DBFE08FF237F194800F1B2B0 /* UserService.swift */,
-				DBFE0901237F19CC00F1B2B0 /* User.swift */,
 			);
 			path = UserService;
 			sourceTree = "<group>";
@@ -592,22 +659,31 @@
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */,
+				DB82BD4D237F6971000B8D21 /* EventsPresenter.swift in Sources */,
 				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
 				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
 				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
+				DB82BD4F237F6984000B8D21 /* EventsPresenterProtocol.swift in Sources */,
 				DB260337237E03FF0076F63A /* AppDelegate.swift in Sources */,
 				DB611DC7237F558400041BAF /* LoginViewProtocol.swift in Sources */,
 				DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */,
+				DB82BD54237F6A62000B8D21 /* EventsInteractorProtocol.swift in Sources */,
+				DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */,
+				DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */,
 				DB611DBC237F3DAF00041BAF /* LoginPresenterProtocol.swift in Sources */,
+				DB82BD5F237F6D2C000B8D21 /* EventResponse.swift in Sources */,
 				DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */,
 				DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
 				DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */,
 				DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */,
+				DB82BD52237F6A55000B8D21 /* EventsInteractor.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
 				DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */,
+				DB82BD57237F6ABD000B8D21 /* EventsApiWorker.swift in Sources */,
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
 				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
+				DB82BD59237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift in Sources */,
 				DB611DB7237F319E00041BAF /* LoginPresenter.swift in Sources */,
 				DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */,
 			);
