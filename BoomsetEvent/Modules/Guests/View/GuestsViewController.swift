@@ -15,7 +15,7 @@ extension GuestsViewController{
         controller.selectedEvent = selectedEvent
         
         let presenter = GuestsPresenter()
-        let iterator = GuestsInteractor()
+        let iterator = GuestsInteractor(apiWorker: GuestsApiWorker())
         
         presenter.view = controller
         presenter.interactor = iterator
@@ -85,7 +85,9 @@ class GuestsViewController: UIViewController {
     }
     
     func fetchGuests() {
-        presenter?.fetchGuests()
+        if let selectedEvent = self.selectedEvent {
+            presenter?.fetchGuests(with: selectedEvent.eventId)
+        }
     }
 
 }
@@ -93,11 +95,18 @@ class GuestsViewController: UIViewController {
 //MARK: - Protocol Methods
 extension GuestsViewController: GuestsViewProtocol {
     
-    func showGuests(_ guestModels: [GuestViewModel]) {
+    func showGuestModels(_ guestModels: [GuestViewModel]) {
         self.guestModels = guestModels
         self.tableView.reloadData()
     }
     
+    func showProggress() {
+        self.displayProgress()
+    }
+    
+    func closeProggress() {
+        self.dismissProgress()
+    }
 }
 
 //MARK: - TableView DataSource&Delegate Methods

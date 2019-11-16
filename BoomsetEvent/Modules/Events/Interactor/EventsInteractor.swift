@@ -26,8 +26,8 @@ extension EventsInteractor: EventsInteractorProtocol {
         apiWorker?.fetchEvents() { [unowned self] (result) in
             switch result {
             case .Success(let eventResponse):
-                if let eventResponse = eventResponse as? EventResponse {
-                    self.presenter?.interactor(self, didSuccessWith: eventResponse)
+                if let response = eventResponse as? EventResponse {
+                    self.presenter?.interactor(self, didSuccessWith: response)
                 } else {
                     let error = ApiErrorModel(type: .NotExist)
                     self.presenter?.interactor(self, didFailWith: error)

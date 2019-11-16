@@ -9,11 +9,13 @@
 import Foundation
 
 class EventViewModel {
+    var eventId: Int
     var eventName: String
     var startDate: Date? = nil
     var endDate: Date? = nil
     
     init(event: Event) {
+        self.eventId = event.id
         self.eventName = event.name
         self.startDate = getDate(from: event.starts)
         self.endDate = getDate(from: event.ends)

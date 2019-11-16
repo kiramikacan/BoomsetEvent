@@ -11,8 +11,6 @@ import Foundation
 struct Event: Codable {
     var id: Int
     var name: String
-    var group_id: Int
-    var timezone: String
     var starts: String
     var ends: String
 }

@@ -8,9 +8,16 @@
 
 import Foundation
 
-//MARK: - Properties
+//MARK: - Properties & Init Method
 class GuestsInteractor {
+    
     var presenter: GuestsPresenterProtocol?
+    
+    private var apiWorker: GuestsApiWorkerProtocol?
+    
+    init(apiWorker: GuestsApiWorkerProtocol) {
+        self.apiWorker = apiWorker
+    }
 }
 
 //MARK: - Moc Data Methods
@@ -28,8 +35,24 @@ extension GuestsInteractor {
 
 //MARK: - Protocol Methods
 extension GuestsInteractor: GuestsInteractorProtocol {
-    func fetchGuests() {
-        let guestModels = getMocGuests()
-        presenter?.interactor(self, didSuccessWith: guestModels)
+    func fetchGuests(with eventId: Int) {
+        
+        // close moc data, the data will be getting from the api
+//        let guestModels = getMocGuests()
+//        presenter?.interactor(self, didSuccessWith: guestModels)
+        
+        apiWorker?.fetchGuests(eventId: eventId) { [unowned self] (result) in
+            switch result {
+            case .Success(let eventResponse):
+                if let response = eventResponse as? GuestResponse {
+                    self.presenter?.interactor(self, didSuccessWith: response)
+                } else {
+                    let error = ApiErrorModel(type: .NotExist)
+                    self.presenter?.interactor(self, didFailWith: error)
+                }
+            case.Failure(let error):
+                self.presenter?.interactor(self, didFailWith: error)
+            }
+        }
     }
 }

@@ -9,5 +9,7 @@
 import Foundation
 
 protocol GuestsViewProtocol {
-    func showGuests(_ guests: [GuestViewModel])
+    func showProggress()
+    func closeProggress()
+    func showGuestModels(_ guests: [GuestViewModel])
 }
