@@ -20,6 +20,22 @@ struct Guest: Codable {
     private var job_title: String?
     private var company: String?
     
+    init() {
+    }
+    
+    init(prefix: String?, selfie: String?, first_name: String?, last_name: String?, email: String?, phone: String?, cell_phone: String?, work_phone: String?, job_title: String?, company: String?) {
+        self.prefix = prefix
+        self.selfie = selfie
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.phone = phone
+        self.cell_phone = cell_phone
+        self.work_phone = work_phone
+        self.job_title = job_title
+        self.company = company
+    }
+    
     func getPrefix() -> String {
         return prefix ?? ""
     }

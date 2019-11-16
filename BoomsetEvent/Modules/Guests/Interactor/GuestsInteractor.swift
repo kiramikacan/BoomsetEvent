@@ -22,14 +22,22 @@ class GuestsInteractor {
 
 //MARK: - Moc Data Methods
 extension GuestsInteractor {
-    func getMocGuests() -> [GuestViewModel] {
-        var guestModels = [GuestViewModel]()
+    func getMocGuests() -> GuestResponse {
+
+        var guests = [Guest]()
         
-        guestModels.append(GuestViewModel(prefix: "myPrefix", profileImageUrl: "https://i.pravatar.cc/150?img=63", firstName: "Kirami", lastName: "Kaçan", email: "kirami.kacan@gmail.com", phone: "+90 544 531 35 06", cellPhone: "+90 555 888 66 33", workPhone: "+90 555 999 55 44", jobTitle: "Senior iOS Developer", company: "Boomset"))
-        guestModels.append(GuestViewModel(prefix: "myPrefix", profileImageUrl: "https://i.pravatar.cc/150?img=67", firstName: "Ömer Asaf", lastName: "Kaçan", email: "omer.asaf@gmail.com", phone: "+90 456 67 35 06", cellPhone: "+90 555 888 66 33", workPhone: "+90 555 999 55 44", jobTitle: "Product Owner", company: "Goolge"))
-        guestModels.append(GuestViewModel(prefix: "myPrefix", profileImageUrl: "https://i.pravatar.cc/150?img=68", firstName: "Kerem Ali", lastName: "Kaçan", email: "kerem.ali@gmail.com", phone: "+90 578 32 35 06", cellPhone: "+90 555 888 66 33", workPhone: "+90 555 999 55 44", jobTitle: "Senior Software Specialist", company: "Apple"))
+        guests.append(Guest())
         
-        return guestModels
+        guests.append(Guest(prefix: "myPrefix", selfie: "https://i.pravatar.cc/150?img=63", first_name: "Kirami", last_name: "Kaçan", email: "kirami.kacan@gmail.com", phone: "+90 544 531 35 06", cell_phone: "+90 555 888 66 33", work_phone: "+90 555 999 55 44", job_title: "Senior iOS Developer", company: "Boomset"))
+        
+        guests.append(Guest(prefix: "myPrefix", selfie: "https://i.pravatar.cc/150?img=67", first_name: "Ömer Asaf", last_name: "Kaçan", email: "omer.asaf@gmail.com", phone: "+90 456 67 35 06", cell_phone: "+90 555 888 66 33", work_phone: "+90 555 999 55 44", job_title: "Product Owner", company: "Goolge"))
+        
+        guests.append(Guest(prefix: "myPrefix", selfie: "https://i.pravatar.cc/150?img=68", first_name: "Kerem Ali", last_name: "Kaçan", email: "kerem.ali@gmail.com", phone: "+90 578 32 35 06", cell_phone: "+90 555 888 66 33", work_phone: "+90 555 999 55 44", job_title: "Senior Software Specialist", company: "Apple"))
+        
+        
+        let response = GuestResponse(count: 0, previous: nil, next: nil, results: guests)
+        
+        return response
     }
 }
 
