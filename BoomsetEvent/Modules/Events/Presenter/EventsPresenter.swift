@@ -26,7 +26,7 @@ extension EventsPresenter: EventsPresenterProtocol {
         interactor?.fetchEvents()
     }
     
-    func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse) {
+    func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse, from source: DataSourceType) {
         
         var eventModels = [EventViewModel]()
         
@@ -35,11 +35,16 @@ extension EventsPresenter: EventsPresenterProtocol {
         }
         
         view?.showEventModels(eventModels)
-        view?.closeProggress()
+        
+        if eventModels.count > 0 || source == .remote {
+            view?.closeProggress()
+        }
     }
     
-    func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel) {
-        view?.closeProggress()
+    func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel, from source: DataSourceType) {
+        if source == .remote {
+            view?.closeProggress()
+        }
     }
     
 }

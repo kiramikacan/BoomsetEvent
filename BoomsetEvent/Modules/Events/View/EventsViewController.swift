@@ -15,7 +15,7 @@ extension EventsViewController{
         let navController = UINavigationController(rootViewController: controller)
         
         let presenter = EventsPresenter()
-        let iterator = EventsInteractor(apiWorker: EventsApiWorker())
+        let iterator = EventsInteractor(apiWorker: EventsApiWorker(), cacher: EventsCacher())
         
         presenter.view = controller
         presenter.interactor = iterator

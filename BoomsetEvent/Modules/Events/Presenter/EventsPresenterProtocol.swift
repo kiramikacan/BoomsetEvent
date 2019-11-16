@@ -12,6 +12,11 @@ protocol EventsPresenterProtocol {
     func fetchEvents()
     func handleEventSelection(with selectedEvent: EventViewModel)
     
-    func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse)
-    func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel)
+    func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse, from source: DataSourceType)
+    func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel, from source: DataSourceType)
+}
+
+enum DataSourceType {
+    case cache
+    case remote
 }

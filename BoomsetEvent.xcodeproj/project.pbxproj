@@ -66,6 +66,8 @@
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
+		DBFFD2BC23809EE600DF8F1F /* EventsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFFD2BB23809EE600DF8F1F /* EventsCacher.swift */; };
+		DBFFD2BE23809EF900DF8F1F /* EventsCacherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFFD2BD23809EF900DF8F1F /* EventsCacherProtocol.swift */; };
 		FEBE7DD47D869E4E5D918052 /* Pods_BoomsetEvent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA45A8DFFC33D3FFC8B780B /* Pods_BoomsetEvent.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +160,8 @@
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DBFFD2BB23809EE600DF8F1F /* EventsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCacher.swift; sourceTree = "<group>"; };
+		DBFFD2BD23809EF900DF8F1F /* EventsCacherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCacherProtocol.swift; sourceTree = "<group>"; };
 		FFA723902BD30BEE73F552E9 /* Pods-BoomsetEventTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoomsetEventTests.release.xcconfig"; path = "Target Support Files/Pods-BoomsetEventTests/Pods-BoomsetEventTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -454,6 +458,7 @@
 		DB611DAF237F2F2600041BAF /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				DBFFD2BA23809EB600DF8F1F /* Cacher */,
 				DB82BD5A237F6C73000B8D21 /* Entity */,
 				DB82BD55237F6AA6000B8D21 /* Worker */,
 				DB82BD50237F6A43000B8D21 /* Interactor */,
@@ -569,6 +574,15 @@
 				DBFE08FF237F194800F1B2B0 /* UserService.swift */,
 			);
 			path = UserService;
+			sourceTree = "<group>";
+		};
+		DBFFD2BA23809EB600DF8F1F /* Cacher */ = {
+			isa = PBXGroup;
+			children = (
+				DBFFD2BB23809EE600DF8F1F /* EventsCacher.swift */,
+				DBFFD2BD23809EF900DF8F1F /* EventsCacherProtocol.swift */,
+			);
+			path = Cacher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -855,6 +869,8 @@
 				DB4D4CA8238005B3004AAFAE /* GuestsInteractor.swift in Sources */,
 				DB4D4CBE23801F57004AAFAE /* GuestResponse.swift in Sources */,
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
+				DBFFD2BE23809EF900DF8F1F /* EventsCacherProtocol.swift in Sources */,
+				DBFFD2BC23809EE600DF8F1F /* EventsCacher.swift in Sources */,
 				DB4D4CA3238002F9004AAFAE /* GuestsViewProtocol.swift in Sources */,
 				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
 				DB82BD59237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift in Sources */,

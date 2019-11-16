@@ -13,9 +13,11 @@ class EventsInteractor {
     var presenter: EventsPresenterProtocol?
     
     private var apiWorker: EventsApiWorkerProtocol?
+    private var cacher: EventsCacherProtocol?
     
-    init(apiWorker: EventsApiWorkerProtocol) {
+    init(apiWorker: EventsApiWorkerProtocol, cacher: EventsCacherProtocol) {
         self.apiWorker = apiWorker
+        self.cacher = cacher
     }
 }
 
@@ -23,18 +25,31 @@ class EventsInteractor {
 extension EventsInteractor: EventsInteractorProtocol {
     
     func fetchEvents() {
+        
+        // firstly load events from the cach
+        cacher?.loadEventsFromTheCache(callback: { [unowned self] (eventResponse) in
+            self.onEventsSuccessfulyFetched(eventResponse: eventResponse, sourceType: .cache)
+        })
+        
+        // and then load events from the api
         apiWorker?.fetchEvents() { [unowned self] (result) in
             switch result {
             case .Success(let eventResponse):
-                if let response = eventResponse as? EventResponse {
-                    self.presenter?.interactor(self, didSuccessWith: response)
-                } else {
-                    let error = ApiErrorModel(type: .NotExist)
-                    self.presenter?.interactor(self, didFailWith: error)
-                }
+                let response = eventResponse as? EventResponse
+                self.cacher?.saveEventsToTheCache(eventResponse: response) // cache response getting from the api
+                self.onEventsSuccessfulyFetched(eventResponse: response, sourceType: .remote)
             case.Failure(let error):
-                self.presenter?.interactor(self, didFailWith: error)
+                self.presenter?.interactor(self, didFailWith: error, from: .remote)
             }
+        }
+    }
+    
+    func onEventsSuccessfulyFetched(eventResponse: EventResponse?, sourceType: DataSourceType) {
+        if let response = eventResponse {
+            self.presenter?.interactor(self, didSuccessWith: response, from: sourceType)
+        } else {
+            let error = ApiErrorModel(type: .NotExist)
+            self.presenter?.interactor(self, didFailWith: error, from: sourceType)
         }
     }
     
