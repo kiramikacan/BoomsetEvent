@@ -37,7 +37,7 @@ class EventViewModel {
     }
     
     private func getString(from date: Date) -> String {
-        return DateFormatter.localizedString(from: date, dateStyle: .short, timeStyle: .short)
+        return DateFormatter.localizedString(from: date, dateStyle: .medium, timeStyle: .short)
     }
     
     private func getDate(from string: String) -> Date? {
