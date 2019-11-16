@@ -30,8 +30,11 @@ extension EventsViewController{
 class EventsViewController: UIViewController {
 
     var eventModels = [EventViewModel]()
+    var filteredEventModels = [EventViewModel]()
     
     var presenter: EventsPresenterProtocol?
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,7 +43,16 @@ class EventsViewController: UIViewController {
 
         self.navigationItem.title = "Events"
         
+        setupSearchBar()
         setubTableView()
+    }
+    
+    func setupSearchBar()  {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search by name"
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
     }
     
     func setubTableView() {
@@ -69,6 +81,7 @@ extension EventsViewController: EventsViewProtocol {
     
     func showEventModels(_ eventModels: [EventViewModel]) {
         self.eventModels = eventModels
+        self.filteredEventModels = eventModels
         self.tableView.reloadData()
     }
     
@@ -89,21 +102,47 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventModels.count
+        return filteredEventModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.className, for: indexPath) as! EventsTableViewCell
-        if let eventModel = eventModels[safe: indexPath.row] {
+        if let eventModel = filteredEventModels[safe: indexPath.row] {
             cell.configure(with: eventModel)
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let eventModel = eventModels[safe: indexPath.row] {
+        if let eventModel = filteredEventModels[safe: indexPath.row] {
             presenter?.handleEventSelection(with: eventModel)
         }
+    }
+    
+}
+
+//MARK: - SearchResults Methods
+extension EventsViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text , searchController.isActive {
+            if searchText.isEmpty {
+                filteredEventModels = eventModels
+            } else {
+                filteredEventModels = eventModels.filter{$0.eventName.contains(searchText)}
+            }
+            tableView.reloadData()
+        }
+    }
+    
+}
+
+//MARK: - SearchBar Methods
+extension EventsViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        filteredEventModels = eventModels
+        tableView.reloadData()
     }
     
 }
