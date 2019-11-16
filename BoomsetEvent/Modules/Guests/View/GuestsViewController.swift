@@ -22,11 +22,35 @@ class GuestsViewController: UIViewController {
 
     var selectedEvent: EventViewModel?
     
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "..."
+        return label
+    }()
+    
+    lazy var subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        label.text = "Guests"
+        return label
+    }()
+    
+    lazy var titleStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        stackView.axis = .vertical
+        stackView.spacing = 2.0
+        return stackView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.titleView = titleStackView
+        
         if let selectedEvent = self.selectedEvent {
-            self.navigationItem.title = selectedEvent.event.name
+            titleLabel.text = selectedEvent.event.name
         }
         
     }
