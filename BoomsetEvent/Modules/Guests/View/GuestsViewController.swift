@@ -76,8 +76,9 @@ class GuestsViewController: UIViewController {
     func setubTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 92
+        tableView.estimatedRowHeight = 208
         tableView.register(UINib(nibName: GuestsTableViewCell.className, bundle: nil), forCellReuseIdentifier: GuestsTableViewCell.className)
         
         fetchGuests()

@@ -32,4 +32,8 @@ class GuestViewModel {
         self.jobTitle = jobTitle
         self.company = company
     }
+    
+    func getFullName() -> String {
+        return firstName + " " + lastName
+    }
 }

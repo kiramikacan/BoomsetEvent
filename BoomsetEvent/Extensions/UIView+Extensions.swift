@@ -9,8 +9,10 @@
 import UIKit
 
 extension UIView {
-    func roundCorners(radius: CGFloat = 8) {
+    func roundCorners(radius: CGFloat = 8, borderColor: UIColor = .gray, borderWidth: CGFloat = 0) {
         self.clipsToBounds = true
         self.layer.cornerRadius = radius
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = borderWidth
     }
 }
