@@ -66,8 +66,12 @@ class GuestsViewController: UIViewController {
     
     var selectedEvent: EventViewModel?
     var guestModels = [GuestViewModel]()
+    var filteredGuestModels = [GuestViewModel]()
+    
     var nextUrl: String? = nil
     var presenter: GuestsPresenterProtocol?
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -75,6 +79,7 @@ class GuestsViewController: UIViewController {
         super.viewDidLoad()
 
         setupTitleView()
+        setupSearchBar()
         setupViewMore()
         setubTableView()
     }
@@ -85,6 +90,15 @@ class GuestsViewController: UIViewController {
         if let selectedEvent = self.selectedEvent {
             titleLabel.text = selectedEvent.eventName
         }
+    }
+    
+    func setupSearchBar()  {
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search by name"
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
     }
     
     func setupViewMore() {
@@ -114,6 +128,11 @@ class GuestsViewController: UIViewController {
 
     func fetchMoreGuests() {
         
+        // dont fetch more data when user searching
+        if let searchText = searchController.searchBar.text, searchText.isEmpty == false {
+            return
+        }
+        
         guard let selectedEvent = self.selectedEvent else { return }
         
         guard let nextUrl = self.nextUrl else { return }
@@ -140,6 +159,7 @@ extension GuestsViewController: GuestsViewProtocol {
         for guest in guests {
             self.guestModels.append(guest)
         }
+        self.filteredGuestModels = guestModels
         self.tableView.reloadData()
         
         if self.isLoading {
@@ -154,6 +174,8 @@ extension GuestsViewController: GuestsViewProtocol {
         self.nextUrl = next
         
         self.guestModels = guestModels
+        self.filteredGuestModels = guestModels
+        
         self.tableView.reloadData()
         
         self.updateGuestCount()
@@ -179,12 +201,12 @@ extension GuestsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return guestModels.count
+        return filteredGuestModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GuestsTableViewCell.className, for: indexPath) as! GuestsTableViewCell
-        if let eventModel = guestModels[safe: indexPath.row] {
+        if let eventModel = filteredGuestModels[safe: indexPath.row] {
             cell.configure(with: eventModel)
         }
         return cell
@@ -201,5 +223,27 @@ extension GuestsViewController {
         if currentOffset > maximumOffset {
             fetchMoreGuests()
         }
+    }
+}
+
+//MARK: - SearchResults Methods
+extension GuestsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text , searchController.isActive {
+            if searchText.isEmpty {
+                filteredGuestModels = guestModels
+            } else {
+                filteredGuestModels = guestModels.filter{$0.getFullName().contains(searchText)}
+            }
+            tableView.reloadData()
+        }
+    }
+}
+
+//MARK: - SearchBar Methods
+extension GuestsViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        filteredGuestModels = guestModels
+        tableView.reloadData()
     }
 }

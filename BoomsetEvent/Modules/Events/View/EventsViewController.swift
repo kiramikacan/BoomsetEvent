@@ -49,10 +49,11 @@ class EventsViewController: UIViewController {
     
     func setupSearchBar()  {
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search by name"
+        navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
-        searchController.searchBar.delegate = self
     }
     
     func setubTableView() {
@@ -123,7 +124,6 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
 
 //MARK: - SearchResults Methods
 extension EventsViewController: UISearchResultsUpdating {
-    
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text , searchController.isActive {
             if searchText.isEmpty {
@@ -134,15 +134,12 @@ extension EventsViewController: UISearchResultsUpdating {
             tableView.reloadData()
         }
     }
-    
 }
 
 //MARK: - SearchBar Methods
 extension EventsViewController: UISearchBarDelegate {
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         filteredEventModels = eventModels
         tableView.reloadData()
     }
-    
 }
