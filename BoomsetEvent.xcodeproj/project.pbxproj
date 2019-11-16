@@ -28,6 +28,9 @@
 		DB4D4C92237FF11A004AAFAE /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */; };
 		DB4D4C93237FF11A004AAFAE /* GuestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */; };
 		DB4D4C95237FF641004AAFAE /* Collection+SafeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C94237FF641004AAFAE /* Collection+SafeCheck.swift */; };
+		DB4D4C99237FFBCE004AAFAE /* GuestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C97237FFBCD004AAFAE /* GuestsTableViewCell.swift */; };
+		DB4D4C9A237FFBCE004AAFAE /* GuestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C98237FFBCE004AAFAE /* GuestsTableViewCell.xib */; };
+		DB4D4C9D237FFC3B004AAFAE /* GuestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
@@ -106,6 +109,9 @@
 		DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
 		DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestsViewController.xib; sourceTree = "<group>"; };
 		DB4D4C94237FF641004AAFAE /* Collection+SafeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeCheck.swift"; sourceTree = "<group>"; };
+		DB4D4C97237FFBCD004AAFAE /* GuestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsTableViewCell.swift; sourceTree = "<group>"; };
+		DB4D4C98237FFBCE004AAFAE /* GuestsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestsTableViewCell.xib; sourceTree = "<group>"; };
+		DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewModel.swift; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 		DB4D4C8C237FF0DE004AAFAE /* Guests */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D4C9B237FFC2A004AAFAE /* ViewModel */,
 				DB4D4C8D237FF0F0004AAFAE /* View */,
 			);
 			path = Guests;
@@ -339,10 +346,28 @@
 		DB4D4C8D237FF0F0004AAFAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D4C96237FFBB3004AAFAE /* Cell */,
 				DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */,
 				DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DB4D4C96237FFBB3004AAFAE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4C98237FFBCE004AAFAE /* GuestsTableViewCell.xib */,
+				DB4D4C97237FFBCD004AAFAE /* GuestsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DB4D4C9B237FFC2A004AAFAE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DB611DAF237F2F2600041BAF /* Events */ = {
@@ -580,6 +605,7 @@
 				DB4D4C93237FF11A004AAFAE /* GuestsViewController.xib in Resources */,
 				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
 				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
+				DB4D4C9A237FFBCE004AAFAE /* GuestsTableViewCell.xib in Resources */,
 				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
+				DB4D4C99237FFBCE004AAFAE /* GuestsTableViewCell.swift in Sources */,
 				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
 				DB82BD65237F74C1000B8D21 /* EventsTableViewCell.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */,
@@ -742,6 +769,7 @@
 				DB82BD69237F7740000B8D21 /* EventViewModel.swift in Sources */,
 				DB611DB7237F319E00041BAF /* LoginPresenter.swift in Sources */,
 				DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */,
+				DB4D4C9D237FFC3B004AAFAE /* GuestViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

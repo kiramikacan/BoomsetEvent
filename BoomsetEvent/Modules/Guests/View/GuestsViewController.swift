@@ -20,8 +20,6 @@ extension GuestsViewController{
 //MARK: - Class Base Methods & Properties
 class GuestsViewController: UIViewController {
 
-    var selectedEvent: EventViewModel?
-    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -44,15 +42,51 @@ class GuestsViewController: UIViewController {
         return stackView
     }()
     
+    var selectedEvent: EventViewModel?
+    var guestModels = [GuestViewModel]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTitleView()
+        setubTableView()
+    }
+    
+    func setupTitleView() {
         navigationItem.titleView = titleStackView
         
         if let selectedEvent = self.selectedEvent {
             titleLabel.text = selectedEvent.event.name
         }
-        
+    }
+    
+    func setubTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 72
+        tableView.register(UINib(nibName: GuestsTableViewCell.className, bundle: nil), forCellReuseIdentifier: GuestsTableViewCell.className)
     }
 
+}
+
+//MARK: - TableView DataSource&Delegate Methods
+extension GuestsViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return guestModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: GuestsTableViewCell.className, for: indexPath) as! GuestsTableViewCell
+        if let eventModel = guestModels[safe: indexPath.row] {
+            cell.configure(with: eventModel)
+        }
+        return cell
+    }
+    
 }
