@@ -373,11 +373,11 @@
 		DB611DAF237F2F2600041BAF /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				DB82BD67237F7715000B8D21 /* ViewModel */,
 				DB82BD5A237F6C73000B8D21 /* Entity */,
 				DB82BD55237F6AA6000B8D21 /* Worker */,
 				DB82BD50237F6A43000B8D21 /* Interactor */,
 				DB82BD4B237F695C000B8D21 /* Presenter */,
+				DB82BD67237F7715000B8D21 /* ViewModel */,
 				DB611DB0237F2F6500041BAF /* View */,
 			);
 			path = Events;

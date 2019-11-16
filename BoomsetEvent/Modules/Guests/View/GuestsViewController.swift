@@ -58,7 +58,7 @@ class GuestsViewController: UIViewController {
         navigationItem.titleView = titleStackView
         
         if let selectedEvent = self.selectedEvent {
-            titleLabel.text = selectedEvent.event.name
+            titleLabel.text = selectedEvent.eventName
         }
     }
     

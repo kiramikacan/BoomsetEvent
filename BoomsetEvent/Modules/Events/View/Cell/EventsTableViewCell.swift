@@ -27,7 +27,7 @@ class EventsTableViewCell: UITableViewCell {
     }
     
     func configure(with eventModel: EventViewModel) {
-        eventNameLabel.text = eventModel.event.name
+        eventNameLabel.text = eventModel.eventName
         
         eventDateLabel.text = "\(eventModel.getStartDateString()) - \(eventModel.getEndDateString())"
     }
