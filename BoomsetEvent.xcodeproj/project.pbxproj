@@ -43,6 +43,9 @@
 		DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD5C237F6CA0000B8D21 /* Event.swift */; };
 		DB82BD5F237F6D2C000B8D21 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD5E237F6D2C000B8D21 /* EventResponse.swift */; };
 		DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */; };
+		DB82BD65237F74C1000B8D21 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD63237F74C1000B8D21 /* EventsTableViewCell.swift */; };
+		DB82BD66237F74C1000B8D21 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB82BD64237F74C1000B8D21 /* EventsTableViewCell.xib */; };
+		DB82BD69237F7740000B8D21 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD68237F7740000B8D21 /* EventViewModel.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
@@ -115,6 +118,9 @@
 		DB82BD5C237F6CA0000B8D21 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DB82BD5E237F6D2C000B8D21 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
 		DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewProtocol.swift; sourceTree = "<group>"; };
+		DB82BD63237F74C1000B8D21 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		DB82BD64237F74C1000B8D21 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		DB82BD68237F7740000B8D21 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 		DB611DAF237F2F2600041BAF /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				DB82BD67237F7715000B8D21 /* ViewModel */,
 				DB82BD5A237F6C73000B8D21 /* Entity */,
 				DB82BD55237F6AA6000B8D21 /* Worker */,
 				DB82BD50237F6A43000B8D21 /* Interactor */,
@@ -329,6 +336,7 @@
 		DB611DB0237F2F6500041BAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB82BD62237F74A7000B8D21 /* Cell */,
 				DB611DB2237F2F8400041BAF /* EventsViewController.xib */,
 				DB611DB1237F2F8400041BAF /* EventsViewController.swift */,
 				DB82BD60237F6EDD000B8D21 /* EventsViewProtocol.swift */,
@@ -396,6 +404,23 @@
 				DBFE0901237F19CC00F1B2B0 /* User.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB82BD62237F74A7000B8D21 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD64237F74C1000B8D21 /* EventsTableViewCell.xib */,
+				DB82BD63237F74C1000B8D21 /* EventsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DB82BD67237F7715000B8D21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB82BD68237F7740000B8D21 /* EventViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DBFE08FD237F192A00F1B2B0 /* Services */ = {
@@ -526,6 +551,7 @@
 			files = (
 				DB26036D237E04900076F63A /* LoginViewController.xib in Resources */,
 				DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */,
+				DB82BD66237F74C1000B8D21 /* EventsTableViewCell.xib in Resources */,
 				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
 				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
 				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
@@ -658,6 +684,7 @@
 			files = (
 				DB26036C237E04900076F63A /* LoginViewController.swift in Sources */,
 				DB48CAA1237F040E0082C86E /* EApiErrorType.swift in Sources */,
+				DB82BD65237F74C1000B8D21 /* EventsTableViewCell.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */,
 				DB82BD4D237F6971000B8D21 /* EventsPresenter.swift in Sources */,
 				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
@@ -684,6 +711,7 @@
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
 				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
 				DB82BD59237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift in Sources */,
+				DB82BD69237F7740000B8D21 /* EventViewModel.swift in Sources */,
 				DB611DB7237F319E00041BAF /* LoginPresenter.swift in Sources */,
 				DB611DC5237F4B7700041BAF /* LoginInteractorProtocol.swift in Sources */,
 			);

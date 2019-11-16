@@ -10,16 +10,24 @@ import UIKit
 
 class EventsViewController: UIViewController {
 
-    var eventResponse: EventResponse?
-    var events = [Event]()
+    var eventModels = [EventViewModel]()
     
     var presenter: EventsPresenterProtocol?
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Events"
         
+        setubTableView()
+    }
+    
+    func setubTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: EventsTableViewCell.className, bundle: nil), forCellReuseIdentifier: EventsTableViewCell.className)
         presenter?.fetchEvents()
     }
 
@@ -27,9 +35,9 @@ class EventsViewController: UIViewController {
 
 extension EventsViewController: EventsViewProtocol {
     
-    func setEventResponse(_ response: EventResponse) {
-        self.eventResponse = response
-        self.events = response.results
+    func setEventModels(_ eventModels: [EventViewModel]) {
+        self.eventModels = eventModels
+        self.tableView.reloadData()
     }
     
     func showProggress() {
@@ -58,4 +66,31 @@ extension EventsViewController{
         
         return navController
     }
+}
+
+//MARK: - TableView DataSource&Delegate Methods
+
+extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return eventModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.className, for: indexPath) as! EventsTableViewCell
+        cell.configure(with: eventModels[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
 }

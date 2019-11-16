@@ -19,7 +19,14 @@ class EventsPresenter: EventsPresenterProtocol {
     }
     
     func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse) {
-        view?.setEventResponse(data)
+        
+        var eventModels = [EventViewModel]()
+        
+        for event in data.results {
+            eventModels.append(EventViewModel(event: event))
+        }
+        
+        view?.setEventModels(eventModels)
         view?.closeProggress()
     }
     
