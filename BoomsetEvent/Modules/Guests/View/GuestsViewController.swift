@@ -15,7 +15,7 @@ extension GuestsViewController{
         controller.selectedEvent = selectedEvent
         
         let presenter = GuestsPresenter()
-        let iterator = GuestsInteractor(apiWorker: GuestsApiWorker())
+        let iterator = GuestsInteractor(apiWorker: GuestsApiWorker(), cacher: GuestsCacher())
         
         presenter.view = controller
         presenter.interactor = iterator

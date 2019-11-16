@@ -14,9 +14,11 @@ class GuestsInteractor {
     var presenter: GuestsPresenterProtocol?
     
     private var apiWorker: GuestsApiWorkerProtocol?
+    private var cacher: GuestsCacherProtocol?
     
-    init(apiWorker: GuestsApiWorkerProtocol) {
+    init(apiWorker: GuestsApiWorkerProtocol, cacher: GuestsCacherProtocol) {
         self.apiWorker = apiWorker
+        self.cacher = cacher
     }
 }
 
@@ -44,20 +46,6 @@ extension GuestsInteractor {
 //MARK: - Protocol Methods
 extension GuestsInteractor: GuestsInteractorProtocol {
     
-    func handleResponse(result: ECallbackResultType) {
-        switch result {
-        case .Success(let eventResponse):
-            if let response = eventResponse as? GuestResponse {
-                self.presenter?.interactor(self, didSuccessWith: response)
-            } else {
-                let error = ApiErrorModel(type: .NotExist)
-                self.presenter?.interactor(self, didFailWith: error)
-            }
-        case.Failure(let error):
-            self.presenter?.interactor(self, didFailWith: error)
-        }
-    }
-    
     func fetchMoreGuests(with nextUrl: String) {
         let url = nextUrl.replacingOccurrences(of: "load_start", with: "timestamp").replacingOccurrences(of: "%", with: ":").replacingOccurrences(of: "rest/", with: "")
         apiWorker?.fetchMoreGuests(with: url) { [unowned self] (result) in
@@ -71,8 +59,36 @@ extension GuestsInteractor: GuestsInteractorProtocol {
 //        let guestModels = getMocGuests()
 //        presenter?.interactor(self, didSuccessWith: guestModels)
         
+        // firstly load events from the cach
+        cacher?.loadGuestsFromTheCache(for: eventId, callback: { (guestResponse) in
+            self.onGuestsSuccessfulyFetched(guestResponse: guestResponse, sourceType: .cache)
+        })
+        
         apiWorker?.fetchGuests(with: eventId) { [unowned self] (result) in
-            self.handleResponse(result: result)
+            self.handleResponse(with: eventId, result: result)
         }
     }
+    
+    func handleResponse(with eventId: Int? = nil, result: ECallbackResultType) {
+        switch result {
+        case .Success(let guestResponse):
+            let response = guestResponse as? GuestResponse
+            if let eventId = eventId {
+                self.cacher?.saveGuestsToTheCache(guestResponse: response, for: eventId)// cache response getting from the api
+            }
+            self.onGuestsSuccessfulyFetched(guestResponse: response, sourceType: .remote)
+        case.Failure(let error):
+            self.presenter?.interactor(self, didFailWith: error, from: .remote)
+        }
+    }
+    
+    func onGuestsSuccessfulyFetched(guestResponse: GuestResponse?, sourceType: DataSourceType) {
+        if let response = guestResponse {
+            self.presenter?.interactor(self, didSuccessWith: response, from: sourceType)
+        } else {
+            let error = ApiErrorModel(type: .NotExist)
+            self.presenter?.interactor(self, didFailWith: error, from: sourceType)
+        }
+    }
+    
 }

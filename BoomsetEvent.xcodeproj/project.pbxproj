@@ -63,6 +63,9 @@
 		DB82BD65237F74C1000B8D21 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD63237F74C1000B8D21 /* EventsTableViewCell.swift */; };
 		DB82BD66237F74C1000B8D21 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB82BD64237F74C1000B8D21 /* EventsTableViewCell.xib */; };
 		DB82BD69237F7740000B8D21 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82BD68237F7740000B8D21 /* EventViewModel.swift */; };
+		DB8C531F2380A733006EBC6C /* GuestsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C531E2380A733006EBC6C /* GuestsCacher.swift */; };
+		DB8C53212380A77A006EBC6C /* GuestsCacherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C53202380A77A006EBC6C /* GuestsCacherProtocol.swift */; };
+		DB8C53252380AC5B006EBC6C /* DataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C53242380AC5B006EBC6C /* DataSourceType.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
@@ -157,6 +160,9 @@
 		DB82BD63237F74C1000B8D21 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		DB82BD64237F74C1000B8D21 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		DB82BD68237F7740000B8D21 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		DB8C531E2380A733006EBC6C /* GuestsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsCacher.swift; sourceTree = "<group>"; };
+		DB8C53202380A77A006EBC6C /* GuestsCacherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsCacherProtocol.swift; sourceTree = "<group>"; };
+		DB8C53242380AC5B006EBC6C /* DataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceType.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -262,7 +268,7 @@
 		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
 			isa = PBXGroup;
 			children = (
-				DB54BF722380413F00AB280B /* SharedViews */,
+				DB54BF722380413F00AB280B /* Shared */,
 				DB26036E237E05C50076F63A /* AppDelegate */,
 				DB26036F237E05E80076F63A /* Storyboard */,
 				DB260372237E062A0076F63A /* Resources */,
@@ -365,8 +371,9 @@
 		DB4D4C8C237FF0DE004AAFAE /* Guests */ = {
 			isa = PBXGroup;
 			children = (
-				DB4D4CBA23801F26004AAFAE /* Entity */,
+				DB8C531D2380A707006EBC6C /* Cacher */,
 				DB4D4CB523801EE7004AAFAE /* Worker */,
+				DB4D4CBA23801F26004AAFAE /* Entity */,
 				DB4D4CA6238005A0004AAFAE /* Interactor */,
 				DB4D4C9F238002B1004AAFAE /* Presenter */,
 				DB4D4C9B237FFC2A004AAFAE /* ViewModel */,
@@ -439,12 +446,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		DB54BF722380413F00AB280B /* SharedViews */ = {
+		DB54BF722380413F00AB280B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				DB54BF732380419700AB280B /* ViewMore */,
+				DB8C53232380AC45006EBC6C /* Enums */,
+				DB8C53222380AC3A006EBC6C /* Views */,
 			);
-			path = SharedViews;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		DB54BF732380419700AB280B /* ViewMore */ = {
@@ -459,8 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				DBFFD2BA23809EB600DF8F1F /* Cacher */,
-				DB82BD5A237F6C73000B8D21 /* Entity */,
 				DB82BD55237F6AA6000B8D21 /* Worker */,
+				DB82BD5A237F6C73000B8D21 /* Entity */,
 				DB82BD50237F6A43000B8D21 /* Interactor */,
 				DB82BD4B237F695C000B8D21 /* Presenter */,
 				DB82BD67237F7715000B8D21 /* ViewModel */,
@@ -557,6 +565,31 @@
 				DB82BD68237F7740000B8D21 /* EventViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB8C531D2380A707006EBC6C /* Cacher */ = {
+			isa = PBXGroup;
+			children = (
+				DB8C531E2380A733006EBC6C /* GuestsCacher.swift */,
+				DB8C53202380A77A006EBC6C /* GuestsCacherProtocol.swift */,
+			);
+			path = Cacher;
+			sourceTree = "<group>";
+		};
+		DB8C53222380AC3A006EBC6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB54BF732380419700AB280B /* ViewMore */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB8C53232380AC45006EBC6C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DB8C53242380AC5B006EBC6C /* DataSourceType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		DBFE08FD237F192A00F1B2B0 /* Services */ = {
@@ -837,6 +870,7 @@
 				DB82BD4D237F6971000B8D21 /* EventsPresenter.swift in Sources */,
 				DB4D4C92237FF11A004AAFAE /* GuestsViewController.swift in Sources */,
 				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
+				DB8C531F2380A733006EBC6C /* GuestsCacher.swift in Sources */,
 				DB4D4CB723801EFE004AAFAE /* GuestsApiWorker.swift in Sources */,
 				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
 				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
@@ -855,10 +889,12 @@
 				DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */,
 				DB611DBC237F3DAF00041BAF /* LoginPresenterProtocol.swift in Sources */,
 				DB82BD5F237F6D2C000B8D21 /* EventResponse.swift in Sources */,
+				DB8C53212380A77A006EBC6C /* GuestsCacherProtocol.swift in Sources */,
 				DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */,
 				DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */,
 				DB260375237E0B300076F63A /* UIView+Extensions.swift in Sources */,
 				DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */,
+				DB8C53252380AC5B006EBC6C /* DataSourceType.swift in Sources */,
 				DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */,
 				DB82BD52237F6A55000B8D21 /* EventsInteractor.swift in Sources */,
 				DB4D4CAA238005F6004AAFAE /* GuestsInteractorProtocol.swift in Sources */,

@@ -15,8 +15,3 @@ protocol EventsPresenterProtocol {
     func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse, from source: DataSourceType)
     func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel, from source: DataSourceType)
 }
-
-enum DataSourceType {
-    case cache
-    case remote
-}

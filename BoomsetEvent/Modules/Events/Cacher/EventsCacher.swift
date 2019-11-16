@@ -40,18 +40,18 @@ extension EventsCacher: EventsCacherProtocol {
     
     func loadEventsFromTheCache(callback: @escaping (EventResponse?) -> Void) {
         DispatchQueue.global().async { [weak self] in
-            var eventResponse: EventResponse?
+            var response: EventResponse?
             if let jsonString = self?.getJsonString(), let jsonData = jsonString.data(using: .utf8) {
                 do
                 {
-                    eventResponse = try JSONDecoder().decode(EventResponse.self, from: jsonData)
+                    response = try JSONDecoder().decode(EventResponse.self, from: jsonData)
                 } catch {
                     print("error while json decoding")
                 }
             }
             
             DispatchQueue.main.async {
-                callback(eventResponse)
+                callback(response)
             }
         }
     }

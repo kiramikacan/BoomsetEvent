@@ -26,7 +26,7 @@ extension GuestsPresenter: GuestsPresenterProtocol {
         }
     }
     
-    func interactor(_ interactor: GuestsInteractorProtocol, didSuccessWith data: GuestResponse) {
+    func interactor(_ interactor: GuestsInteractorProtocol, didSuccessWith data: GuestResponse, from source: DataSourceType) {
         var guestModels = [GuestViewModel]()
         
         for guest in data.results {
@@ -39,11 +39,16 @@ extension GuestsPresenter: GuestsPresenterProtocol {
             view?.showMoreGuestModels(guestModels, next: data.next)
         }
         
-        view?.closeProggress()
+        if guestModels.count > 0 || source == .remote {
+            view?.closeProggress()
+        }
+        
     }
     
-    func interactor(_ interactor: GuestsInteractorProtocol, didFailWith error: ApiErrorModel) {
-        view?.closeProggress()
+    func interactor(_ interactor: GuestsInteractorProtocol, didFailWith error: ApiErrorModel, from source: DataSourceType) {
+        if source == .remote {
+            view?.closeProggress()
+        }
     }
     
     
