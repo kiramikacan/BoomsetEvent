@@ -10,4 +10,5 @@ import Foundation
 
 protocol GuestsInteractorProtocol {
     func fetchGuests(with eventId: Int)
+    func fetchMoreGuests(with nextUrl: String)
 }

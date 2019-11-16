@@ -17,12 +17,23 @@ class GuestsApiWorker {
 //MARK: - Protocol Methods
 extension GuestsApiWorker: GuestsApiWorkerProtocol {
     
-    func fetchGuests(eventId: Int, callback: @escaping (ECallbackResultType) -> Void) {
+    func fetchMoreGuests(with nextUrl: String, callback: @escaping (ECallbackResultType) -> Void) {
+        fetchGuests(with: nextUrl, callback: callback)
+    }
+    
+    func fetchGuests(with eventId: Int, callback: @escaping (ECallbackResultType) -> Void) {
         do {
             // Construct login endpoint
             let url = try mApiService.constructApiEndpoint(base: mBaseUrl, params: "events", "\(eventId)", "guests")
+            fetchGuests(with: url, callback: callback)
+        } catch {
+            callback(ECallbackResultType.Failure(ApiErrorModel(type: EApiErrorType.InvalidParameters)))
+        }
+    }
+    
+    private func fetchGuests(with url: String, callback: @escaping (ECallbackResultType) -> Void) {
+        do {
             let headers = try mApiService.constructHeader()
-            
             
             print("url = \(url)")
             print("headers = \(headers)")

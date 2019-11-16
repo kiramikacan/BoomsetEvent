@@ -11,5 +11,6 @@ import Foundation
 protocol GuestsViewProtocol {
     func showProggress()
     func closeProggress()
-    func showGuestModels(_ guests: [GuestViewModel])
+    func showGuestModels(_ guests: [GuestViewModel], next: String?)
+    func showMoreGuestModels(_ guests: [GuestViewModel], next: String?)
 }

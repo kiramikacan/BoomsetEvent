@@ -43,24 +43,36 @@ extension GuestsInteractor {
 
 //MARK: - Protocol Methods
 extension GuestsInteractor: GuestsInteractorProtocol {
+    
+    func handleResponse(result: ECallbackResultType) {
+        switch result {
+        case .Success(let eventResponse):
+            if let response = eventResponse as? GuestResponse {
+                self.presenter?.interactor(self, didSuccessWith: response)
+            } else {
+                let error = ApiErrorModel(type: .NotExist)
+                self.presenter?.interactor(self, didFailWith: error)
+            }
+        case.Failure(let error):
+            self.presenter?.interactor(self, didFailWith: error)
+        }
+    }
+    
+    func fetchMoreGuests(with nextUrl: String) {
+        let url = nextUrl.replacingOccurrences(of: "load_start", with: "timestamp").replacingOccurrences(of: "%", with: ":").replacingOccurrences(of: "rest/", with: "")
+        apiWorker?.fetchMoreGuests(with: url) { [unowned self] (result) in
+            self.handleResponse(result: result)
+        }
+    }
+    
     func fetchGuests(with eventId: Int) {
         
         // close moc data, the data will be getting from the api
 //        let guestModels = getMocGuests()
 //        presenter?.interactor(self, didSuccessWith: guestModels)
         
-        apiWorker?.fetchGuests(eventId: eventId) { [unowned self] (result) in
-            switch result {
-            case .Success(let eventResponse):
-                if let response = eventResponse as? GuestResponse {
-                    self.presenter?.interactor(self, didSuccessWith: response)
-                } else {
-                    let error = ApiErrorModel(type: .NotExist)
-                    self.presenter?.interactor(self, didFailWith: error)
-                }
-            case.Failure(let error):
-                self.presenter?.interactor(self, didFailWith: error)
-            }
+        apiWorker?.fetchGuests(with: eventId) { [unowned self] (result) in
+            self.handleResponse(result: result)
         }
     }
 }

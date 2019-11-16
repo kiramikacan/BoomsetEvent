@@ -41,6 +41,7 @@
 		DB4D4CB923801F15004AAFAE /* GuestsApiWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CB823801F15004AAFAE /* GuestsApiWorkerProtocol.swift */; };
 		DB4D4CBC23801F34004AAFAE /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CBB23801F34004AAFAE /* Guest.swift */; };
 		DB4D4CBE23801F57004AAFAE /* GuestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CBD23801F57004AAFAE /* GuestResponse.swift */; };
+		DB54BF77238042BE00AB280B /* ViewMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB54BF76238042BE00AB280B /* ViewMore.swift */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
@@ -132,6 +133,7 @@
 		DB4D4CB823801F15004AAFAE /* GuestsApiWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsApiWorkerProtocol.swift; sourceTree = "<group>"; };
 		DB4D4CBB23801F34004AAFAE /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		DB4D4CBD23801F57004AAFAE /* GuestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestResponse.swift; sourceTree = "<group>"; };
+		DB54BF76238042BE00AB280B /* ViewMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMore.swift; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		DB260335237E03FF0076F63A /* BoomsetEvent */ = {
 			isa = PBXGroup;
 			children = (
+				DB54BF722380413F00AB280B /* SharedViews */,
 				DB26036E237E05C50076F63A /* AppDelegate */,
 				DB26036F237E05E80076F63A /* Storyboard */,
 				DB260372237E062A0076F63A /* Resources */,
@@ -430,6 +433,22 @@
 				DB4D4CBD23801F57004AAFAE /* GuestResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		DB54BF722380413F00AB280B /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB54BF732380419700AB280B /* ViewMore */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		DB54BF732380419700AB280B /* ViewMore */ = {
+			isa = PBXGroup;
+			children = (
+				DB54BF76238042BE00AB280B /* ViewMore.swift */,
+			);
+			path = ViewMore;
 			sourceTree = "<group>";
 		};
 		DB611DAF237F2F2600041BAF /* Events */ = {
@@ -815,6 +834,7 @@
 				DB4D4C95237FF641004AAFAE /* Collection+SafeCheck.swift in Sources */,
 				DB4D4CB923801F15004AAFAE /* GuestsApiWorkerProtocol.swift in Sources */,
 				DB82BD54237F6A62000B8D21 /* EventsInteractorProtocol.swift in Sources */,
+				DB54BF77238042BE00AB280B /* ViewMore.swift in Sources */,
 				DB4D4CA1238002C8004AAFAE /* GuestsPresenter.swift in Sources */,
 				DB4D4CBC23801F34004AAFAE /* Guest.swift in Sources */,
 				DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */,

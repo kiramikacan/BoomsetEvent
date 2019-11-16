@@ -9,7 +9,7 @@
 import Foundation
 
 protocol GuestsPresenterProtocol {
-    func fetchGuests(with eventId: Int)
+    func fetchGuests(with eventId: Int, nextUrl: String?)
     
     func interactor(_ interactor: GuestsInteractorProtocol, didSuccessWith data: GuestResponse)
     func interactor(_ interactor: GuestsInteractorProtocol, didFailWith error: ApiErrorModel)

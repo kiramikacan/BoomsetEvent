@@ -40,7 +40,7 @@ class GuestsViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        label.text = "Guests"
+        label.text = "Guests (0)"
         return label
     }()
     
@@ -51,9 +51,22 @@ class GuestsViewController: UIViewController {
         return stackView
     }()
     
+    var viewMore: ViewMore!
+    var isLoading = false {
+        didSet {
+            if isLoading {
+                viewMore.startAnimating()
+                self.tableView.tableFooterView = viewMore
+            } else {
+                viewMore.stopAnimating()
+                self.tableView.tableFooterView = UIView(frame: .zero)
+            }
+        }
+    }
+    
     var selectedEvent: EventViewModel?
     var guestModels = [GuestViewModel]()
-    
+    var nextUrl: String? = nil
     var presenter: GuestsPresenterProtocol?
     
     @IBOutlet weak var tableView: UITableView!
@@ -62,6 +75,7 @@ class GuestsViewController: UIViewController {
         super.viewDidLoad()
 
         setupTitleView()
+        setupViewMore()
         setubTableView()
     }
     
@@ -73,10 +87,18 @@ class GuestsViewController: UIViewController {
         }
     }
     
+    func setupViewMore() {
+        // footer for load more
+        viewMore = ViewMore(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 44))
+        viewMore.setBackground(color: UIColor.clear)
+        isLoading = false
+    }
+    
     func setubTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 208
         tableView.register(UINib(nibName: GuestsTableViewCell.className, bundle: nil), forCellReuseIdentifier: GuestsTableViewCell.className)
@@ -86,18 +108,55 @@ class GuestsViewController: UIViewController {
     
     func fetchGuests() {
         if let selectedEvent = self.selectedEvent {
-            presenter?.fetchGuests(with: selectedEvent.eventId)
+            presenter?.fetchGuests(with: selectedEvent.eventId, nextUrl: nil)
         }
     }
 
+    func fetchMoreGuests() {
+        
+        guard let selectedEvent = self.selectedEvent else { return }
+        
+        guard let nextUrl = self.nextUrl else { return }
+        
+        if !isLoading {
+            DispatchQueue.main.async {
+                self.isLoading = true
+                self.presenter?.fetchGuests(with: selectedEvent.eventId, nextUrl: nextUrl)
+            }
+        }
+    }
+    
+    func updateGuestCount() {
+        self.subtitleLabel.text = "Guests (\(guestModels.count))"
+    }
+    
 }
 
 //MARK: - Protocol Methods
 extension GuestsViewController: GuestsViewProtocol {
     
-    func showGuestModels(_ guestModels: [GuestViewModel]) {
+    func showMoreGuestModels(_ guests: [GuestViewModel], next: String?) {
+        self.nextUrl = next
+        for guest in guests {
+            self.guestModels.append(guest)
+        }
+        self.tableView.reloadData()
+        
+        if self.isLoading {
+            self.isLoading = false
+        }
+        
+        self.updateGuestCount()
+    }
+    
+    func showGuestModels(_ guestModels: [GuestViewModel], next: String?) {
+        
+        self.nextUrl = next
+        
         self.guestModels = guestModels
         self.tableView.reloadData()
+        
+        self.updateGuestCount()
     }
     
     func showProggress() {
@@ -106,6 +165,10 @@ extension GuestsViewController: GuestsViewProtocol {
     
     func closeProggress() {
         self.dismissProgress()
+        
+        if self.isLoading {
+            self.isLoading = false
+        }
     }
 }
 
@@ -127,4 +190,16 @@ extension GuestsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+}
+
+//MARK: - Scroll Delegate Methods
+extension GuestsViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        if maximumOffset < 0 { return }
+        if currentOffset > maximumOffset {
+            fetchMoreGuests()
+        }
+    }
 }

@@ -17,9 +17,13 @@ class GuestsPresenter {
 //MARK: - Protocol Methods
 extension GuestsPresenter: GuestsPresenterProtocol {
     
-    func fetchGuests(with eventId: Int) {
-        view?.showProggress()
-        interactor?.fetchGuests(with: eventId)
+    func fetchGuests(with eventId: Int, nextUrl: String?) {
+        if let nextUrl = nextUrl {
+            interactor?.fetchMoreGuests(with: nextUrl)
+        } else {
+            view?.showProggress()
+            interactor?.fetchGuests(with: eventId)
+        }
     }
     
     func interactor(_ interactor: GuestsInteractorProtocol, didSuccessWith data: GuestResponse) {
@@ -29,7 +33,12 @@ extension GuestsPresenter: GuestsPresenterProtocol {
             guestModels.append(GuestViewModel(prefix: guest.getPrefix(), profileImageUrl: guest.getSelfie(), firstName: guest.getFirstName(), lastName: guest.getLastName(), email: guest.getEmail(), phone: guest.getPhone(), cellPhone: guest.getCellPhone(), workPhone: guest.getWorkPhone(), jobTitle: guest.getJobTitle(), company: guest.getCompany()))
         }
         
-        view?.showGuestModels(guestModels)
+        if data.previous == nil {
+            view?.showGuestModels(guestModels, next: data.next)
+        } else {
+            view?.showMoreGuestModels(guestModels, next: data.next)
+        }
+        
         view?.closeProggress()
     }
     

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol GuestsApiWorkerProtocol {
-    func fetchGuests(eventId: Int, callback: @escaping (ECallbackResultType) -> Void)
+    func fetchGuests(with eventId: Int, callback: @escaping (ECallbackResultType) -> Void)
+    func fetchMoreGuests(with nextUrl: String, callback: @escaping (ECallbackResultType) -> Void)
 }
