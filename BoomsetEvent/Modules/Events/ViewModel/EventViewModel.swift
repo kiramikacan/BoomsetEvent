@@ -15,10 +15,10 @@ class EventViewModel {
     var endDate: Date? = nil
     
     init(event: Event) {
-        self.eventId = event.id
-        self.eventName = event.name
-        self.startDate = getDate(from: event.starts)
-        self.endDate = getDate(from: event.ends)
+        self.eventId = event.getId()
+        self.eventName = event.getName()
+        self.startDate = getDate(from: event.getStarts())
+        self.endDate = getDate(from: event.getEnds())
     }
     
     func getStartDateString() -> String {

@@ -9,5 +9,9 @@
 import Foundation
 
 struct User: Codable {
-    var token: String = ""
+    private var token: String?
+    
+    func getToken() -> String {
+        return token ?? ""
+    }
 }

@@ -26,7 +26,7 @@ extension GuestsPresenter: GuestsPresenterProtocol {
         var guestModels = [GuestViewModel]()
         
         for guest in data.results {
-            guestModels.append(GuestViewModel(prefix: guest.prefix ?? "", profileImageUrl: guest.selfie ?? "", firstName: guest.first_name ?? "", lastName: guest.last_name ?? "", email: guest.email ?? "", phone: guest.phone ?? "", cellPhone: guest.cell_phone ?? "", workPhone: guest.work_phone ?? "", jobTitle: guest.job_title ?? "", company: guest.company ?? ""))
+            guestModels.append(GuestViewModel(prefix: guest.getPrefix(), profileImageUrl: guest.getSelfie(), firstName: guest.getFirstName(), lastName: guest.getLastName(), email: guest.getEmail(), phone: guest.getPhone(), cellPhone: guest.getCellPhone(), workPhone: guest.getWorkPhone(), jobTitle: guest.getJobTitle(), company: guest.getCompany()))
         }
         
         view?.showGuestModels(guestModels)

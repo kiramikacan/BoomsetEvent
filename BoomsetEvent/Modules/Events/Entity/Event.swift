@@ -9,8 +9,21 @@
 import Foundation
 
 struct Event: Codable {
-    var id: Int
-    var name: String
-    var starts: String
-    var ends: String
+    private var id: Int
+    private var name: String?
+    private var starts: String?
+    private var ends: String?
+    
+    func getId() -> Int {
+        return id
+    }
+    func getName() -> String {
+        return name ?? ""
+    }
+    func getStarts() -> String {
+        return starts ?? ""
+    }
+    func getEnds() -> String {
+        return ends ?? ""
+    }
 }

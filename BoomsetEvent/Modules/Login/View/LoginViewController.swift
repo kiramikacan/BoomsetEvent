@@ -41,14 +41,6 @@ class LoginViewController: UIViewController {
         presenter?.startLoginWithCredentials(username: username, password: password)
     }
     
-    func onLoginSuccess(user: User?) {
-        if let user = user {
-            print("User successfuly logged in with Token: \(user.token)")
-        } else {
-            print("User successfuly logged in with missing Token")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
