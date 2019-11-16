@@ -38,4 +38,8 @@ class GuestViewModel {
     func getFullName() -> String {
         return firstName + " " + lastName
     }
+    
+    func getSearchableText() -> String {
+        return getFullName() + email + jobTitle + company
+    }
 }

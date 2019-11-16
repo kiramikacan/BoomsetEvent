@@ -96,7 +96,7 @@ class GuestsViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search by name"
+        searchController.searchBar.placeholder = "Search"
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
@@ -233,7 +233,7 @@ extension GuestsViewController: UISearchResultsUpdating {
             if searchText.isEmpty {
                 filteredGuestModels = guestModels
             } else {
-                filteredGuestModels = guestModels.filter{$0.getFullName().contains(searchText)}
+                filteredGuestModels = guestModels.filter{$0.getSearchableText().contains(searchText)}
             }
             tableView.reloadData()
         }
