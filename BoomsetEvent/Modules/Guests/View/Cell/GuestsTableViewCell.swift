@@ -26,6 +26,8 @@ class GuestsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        self.selectionStyle = .none
+        
         setupProfileImageUI()
     }
 
@@ -40,6 +42,9 @@ class GuestsTableViewCell: UITableViewCell {
     }
     
     func configure(with guestModel: GuestViewModel) {
+        
+        profileImageView.loadProfileImageWith(url: guestModel.profileImageUrl)
+        
         fullNameLabel.text = guestModel.getFullName()
         jobTitleLabel.text = guestModel.jobTitle
         companyLabel.text = guestModel.company

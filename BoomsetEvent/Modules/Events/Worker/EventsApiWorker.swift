@@ -8,11 +8,14 @@
 
 import Foundation
 
-class EventsApiWorker: EventsApiWorkerProtocol {
-    
+//MARK: - Properties
+class EventsApiWorker {
     let mApiService = ApiService()
-    
     let mBaseUrl = Config.ApiBaseUrl
+}
+
+//MARK: - Protocol Methods
+extension EventsApiWorker: EventsApiWorkerProtocol {
     
     func fetchEvents(callback: @escaping (ECallbackResultType) -> Void) {
         do {

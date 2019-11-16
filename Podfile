@@ -9,6 +9,7 @@ target 'BoomsetEvent' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'MBProgressHUD'
+  pod 'SDWebImage', '~> 5.0'
   
   target 'BoomsetEventTests' do
     inherit! :search_paths

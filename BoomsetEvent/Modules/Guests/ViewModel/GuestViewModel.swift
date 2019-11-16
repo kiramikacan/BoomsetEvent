@@ -10,6 +10,7 @@ import Foundation
 
 class GuestViewModel {
     var prefix: String
+    var profileImageUrl: String
     var firstName: String
     var lastName: String
     
@@ -21,8 +22,9 @@ class GuestViewModel {
     var jobTitle: String
     var company: String
     
-    init(prefix: String, firstName: String, lastName: String, email: String, phone: String, cellPhone: String, workPhone: String, jobTitle: String, company: String) {
+    init(prefix: String, profileImageUrl: String, firstName: String, lastName: String, email: String, phone: String, cellPhone: String, workPhone: String, jobTitle: String, company: String) {
         self.prefix = prefix
+        self.profileImageUrl = profileImageUrl
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
