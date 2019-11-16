@@ -31,6 +31,11 @@
 		DB4D4C99237FFBCE004AAFAE /* GuestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C97237FFBCD004AAFAE /* GuestsTableViewCell.swift */; };
 		DB4D4C9A237FFBCE004AAFAE /* GuestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C98237FFBCE004AAFAE /* GuestsTableViewCell.xib */; };
 		DB4D4C9D237FFC3B004AAFAE /* GuestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */; };
+		DB4D4CA1238002C8004AAFAE /* GuestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CA0238002C8004AAFAE /* GuestsPresenter.swift */; };
+		DB4D4CA3238002F9004AAFAE /* GuestsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CA2238002F9004AAFAE /* GuestsViewProtocol.swift */; };
+		DB4D4CA5238004FC004AAFAE /* GuestsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CA4238004FC004AAFAE /* GuestsPresenterProtocol.swift */; };
+		DB4D4CA8238005B3004AAFAE /* GuestsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CA7238005B3004AAFAE /* GuestsInteractor.swift */; };
+		DB4D4CAA238005F6004AAFAE /* GuestsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4CA9238005F6004AAFAE /* GuestsInteractorProtocol.swift */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
@@ -112,6 +117,11 @@
 		DB4D4C97237FFBCD004AAFAE /* GuestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsTableViewCell.swift; sourceTree = "<group>"; };
 		DB4D4C98237FFBCE004AAFAE /* GuestsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestsTableViewCell.xib; sourceTree = "<group>"; };
 		DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewModel.swift; sourceTree = "<group>"; };
+		DB4D4CA0238002C8004AAFAE /* GuestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsPresenter.swift; sourceTree = "<group>"; };
+		DB4D4CA2238002F9004AAFAE /* GuestsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewProtocol.swift; sourceTree = "<group>"; };
+		DB4D4CA4238004FC004AAFAE /* GuestsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsPresenterProtocol.swift; sourceTree = "<group>"; };
+		DB4D4CA7238005B3004AAFAE /* GuestsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsInteractor.swift; sourceTree = "<group>"; };
+		DB4D4CA9238005F6004AAFAE /* GuestsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsInteractorProtocol.swift; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
@@ -337,6 +347,8 @@
 		DB4D4C8C237FF0DE004AAFAE /* Guests */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D4CA6238005A0004AAFAE /* Interactor */,
+				DB4D4C9F238002B1004AAFAE /* Presenter */,
 				DB4D4C9B237FFC2A004AAFAE /* ViewModel */,
 				DB4D4C8D237FF0F0004AAFAE /* View */,
 			);
@@ -349,6 +361,7 @@
 				DB4D4C96237FFBB3004AAFAE /* Cell */,
 				DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */,
 				DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */,
+				DB4D4CA2238002F9004AAFAE /* GuestsViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +381,24 @@
 				DB4D4C9C237FFC3B004AAFAE /* GuestViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB4D4C9F238002B1004AAFAE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4CA0238002C8004AAFAE /* GuestsPresenter.swift */,
+				DB4D4CA4238004FC004AAFAE /* GuestsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DB4D4CA6238005A0004AAFAE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4CA7238005B3004AAFAE /* GuestsInteractor.swift */,
+				DB4D4CA9238005F6004AAFAE /* GuestsInteractorProtocol.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		DB611DAF237F2F2600041BAF /* Events */ = {
@@ -750,6 +781,7 @@
 				DB611DBF237F415600041BAF /* LoginApiWorker.swift in Sources */,
 				DB4D4C95237FF641004AAFAE /* Collection+SafeCheck.swift in Sources */,
 				DB82BD54237F6A62000B8D21 /* EventsInteractorProtocol.swift in Sources */,
+				DB4D4CA1238002C8004AAFAE /* GuestsPresenter.swift in Sources */,
 				DB82BD5D237F6CA0000B8D21 /* Event.swift in Sources */,
 				DB82BD61237F6EDD000B8D21 /* EventsViewProtocol.swift in Sources */,
 				DB611DBC237F3DAF00041BAF /* LoginPresenterProtocol.swift in Sources */,
@@ -760,10 +792,14 @@
 				DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */,
 				DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */,
 				DB82BD52237F6A55000B8D21 /* EventsInteractor.swift in Sources */,
+				DB4D4CAA238005F6004AAFAE /* GuestsInteractorProtocol.swift in Sources */,
 				DB260339237E03FF0076F63A /* SceneDelegate.swift in Sources */,
 				DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */,
 				DB82BD57237F6ABD000B8D21 /* EventsApiWorker.swift in Sources */,
+				DB4D4CA5238004FC004AAFAE /* GuestsPresenterProtocol.swift in Sources */,
+				DB4D4CA8238005B3004AAFAE /* GuestsInteractor.swift in Sources */,
 				DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */,
+				DB4D4CA3238002F9004AAFAE /* GuestsViewProtocol.swift in Sources */,
 				DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */,
 				DB82BD59237F6ACB000B8D21 /* EventsApiWorkerProtocol.swift in Sources */,
 				DB82BD69237F7740000B8D21 /* EventViewModel.swift in Sources */,

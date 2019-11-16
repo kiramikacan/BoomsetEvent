@@ -49,6 +49,11 @@ class EventsViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 72
         tableView.register(UINib(nibName: EventsTableViewCell.className, bundle: nil), forCellReuseIdentifier: EventsTableViewCell.className)
+        
+        fetchEvents()
+    }
+    
+    func fetchEvents() {
         presenter?.fetchEvents()
     }
 

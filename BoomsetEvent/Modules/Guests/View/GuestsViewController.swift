@@ -13,6 +13,15 @@ extension GuestsViewController{
     static func initViewController(selectedEvent: EventViewModel)->UIViewController{
         let controller = GuestsViewController(nibName: "GuestsViewController", bundle: nil)
         controller.selectedEvent = selectedEvent
+        
+        let presenter = GuestsPresenter()
+        let iterator = GuestsInteractor()
+        
+        presenter.view = controller
+        presenter.interactor = iterator
+        iterator.presenter = presenter
+        controller.presenter = presenter
+        
         return controller
     }
 }
@@ -45,6 +54,8 @@ class GuestsViewController: UIViewController {
     var selectedEvent: EventViewModel?
     var guestModels = [GuestViewModel]()
     
+    var presenter: GuestsPresenterProtocol?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -65,10 +76,27 @@ class GuestsViewController: UIViewController {
     func setubTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 72
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 92
         tableView.register(UINib(nibName: GuestsTableViewCell.className, bundle: nil), forCellReuseIdentifier: GuestsTableViewCell.className)
+        
+        fetchGuests()
+    }
+    
+    func fetchGuests() {
+        presenter?.fetchGuests()
     }
 
+}
+
+//MARK: - Protocol Methods
+extension GuestsViewController: GuestsViewProtocol {
+    
+    func showGuests(_ guestModels: [GuestViewModel]) {
+        self.guestModels = guestModels
+        self.tableView.reloadData()
+    }
+    
 }
 
 //MARK: - TableView DataSource&Delegate Methods

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class EventsInteractor: EventsInteractorProtocol {
-    
+//MARK: - Properties & Init Method
+class EventsInteractor {
     var presenter: EventsPresenterProtocol?
     
     private var apiWorker: EventsApiWorkerProtocol?
@@ -17,6 +17,10 @@ class EventsInteractor: EventsInteractorProtocol {
     init(apiWorker: EventsApiWorkerProtocol) {
         self.apiWorker = apiWorker
     }
+}
+
+//MARK: - Protocol Methods
+extension EventsInteractor: EventsInteractorProtocol {
     
     func fetchEvents() {
         apiWorker?.fetchEvents() { [unowned self] (result) in

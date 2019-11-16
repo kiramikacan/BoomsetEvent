@@ -8,11 +8,13 @@
 
 import Foundation
 
+//MARK: - Properties
 class EventsPresenter {
     var view: EventsViewProtocol?
     var interactor: EventsInteractorProtocol?
 }
 
+//MARK: - Protocol Methods
 extension EventsPresenter: EventsPresenterProtocol {
     
     func handleEventSelection(with selectedEvent: EventViewModel) {
