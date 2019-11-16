@@ -13,5 +13,5 @@ protocol EventsViewProtocol {
     func closeProggress()
     func showEventModels(_ events: [EventViewModel])
     
-    func gotoGuests()
+    func gotoGuests(with selectedEvent: EventViewModel)
 }

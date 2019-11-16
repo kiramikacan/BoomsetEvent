@@ -10,9 +10,9 @@ import UIKit
 
 //MARK: - Init Methods
 extension GuestsViewController{
-    static func initViewController()->UIViewController{
+    static func initViewController(selectedEvent: EventViewModel)->UIViewController{
         let controller = GuestsViewController(nibName: "GuestsViewController", bundle: nil)
-        
+        controller.selectedEvent = selectedEvent
         return controller
     }
 }
@@ -20,10 +20,15 @@ extension GuestsViewController{
 //MARK: - Class Base Methods & Properties
 class GuestsViewController: UIViewController {
 
+    var selectedEvent: EventViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "Guests"
+        if let selectedEvent = self.selectedEvent {
+            self.navigationItem.title = selectedEvent.event.name
+        }
+        
     }
 
 }

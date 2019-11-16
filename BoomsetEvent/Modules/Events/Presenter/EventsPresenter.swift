@@ -15,8 +15,8 @@ class EventsPresenter {
 
 extension EventsPresenter: EventsPresenterProtocol {
     
-    func handleEventSelection() {
-        view?.gotoGuests()
+    func handleEventSelection(with selectedEvent: EventViewModel) {
+        view?.gotoGuests(with: selectedEvent)
     }
     
     func fetchEvents() {

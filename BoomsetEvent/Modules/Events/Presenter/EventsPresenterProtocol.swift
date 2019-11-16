@@ -10,7 +10,7 @@ import Foundation
 
 protocol EventsPresenterProtocol {
     func fetchEvents()
-    func handleEventSelection()
+    func handleEventSelection(with selectedEvent: EventViewModel)
     
     func interactor(_ interactor: EventsInteractorProtocol, didSuccessWith data: EventResponse)
     func interactor(_ interactor: EventsInteractorProtocol, didFailWith error: ApiErrorModel)

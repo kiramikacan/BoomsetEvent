@@ -57,8 +57,8 @@ class EventsViewController: UIViewController {
 //MARK: - Protocol Methods
 extension EventsViewController: EventsViewProtocol {
     
-    func gotoGuests() {
-        let vc = GuestsViewController.initViewController()
+    func gotoGuests(with selectedEvent: EventViewModel) {
+        let vc = GuestsViewController.initViewController(selectedEvent: selectedEvent)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -89,12 +89,16 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EventsTableViewCell.className, for: indexPath) as! EventsTableViewCell
-        cell.configure(with: eventModels[indexPath.row])
+        if let eventModel = eventModels[safe: indexPath.row] {
+            cell.configure(with: eventModel)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.handleEventSelection()
+        if let eventModel = eventModels[safe: indexPath.row] {
+            presenter?.handleEventSelection(with: eventModel)
+        }
     }
     
 }
