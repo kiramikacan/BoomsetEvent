@@ -25,6 +25,8 @@
 		DB48CAA3237F04300082C86E /* ECallbackResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA2237F04300082C86E /* ECallbackResultType.swift */; };
 		DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA4237F04490082C86E /* ApiErrorModel.swift */; };
 		DB48CAA7237F04690082C86E /* EHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */; };
+		DB4D4C92237FF11A004AAFAE /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */; };
+		DB4D4C93237FF11A004AAFAE /* GuestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */; };
 		DB611DAE237F2A2600041BAF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */; };
 		DB611DB3237F2F8400041BAF /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB611DB1237F2F8400041BAF /* EventsViewController.swift */; };
 		DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611DB2237F2F8400041BAF /* EventsViewController.xib */; };
@@ -100,6 +102,8 @@
 		DB48CAA2237F04300082C86E /* ECallbackResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECallbackResultType.swift; sourceTree = "<group>"; };
 		DB48CAA4237F04490082C86E /* ApiErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorModel.swift; sourceTree = "<group>"; };
 		DB48CAA6237F04690082C86E /* EHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHttpStatusCode.swift; sourceTree = "<group>"; };
+		DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
+		DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestsViewController.xib; sourceTree = "<group>"; };
 		DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DB611DB1237F2F8400041BAF /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		DB611DB2237F2F8400041BAF /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		DB260367237E04650076F63A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D4C8C237FF0DE004AAFAE /* Guests */,
 				DB611DAF237F2F2600041BAF /* Events */,
 				DB260368237E046F0076F63A /* Login */,
 			);
@@ -318,6 +323,23 @@
 				DB611DAD237F2A2600041BAF /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB4D4C8C237FF0DE004AAFAE /* Guests */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4C8D237FF0F0004AAFAE /* View */,
+			);
+			path = Guests;
+			sourceTree = "<group>";
+		};
+		DB4D4C8D237FF0F0004AAFAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4C91237FF11A004AAFAE /* GuestsViewController.xib */,
+				DB4D4C90237FF11A004AAFAE /* GuestsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DB611DAF237F2F2600041BAF /* Events */ = {
@@ -552,6 +574,7 @@
 				DB26036D237E04900076F63A /* LoginViewController.xib in Resources */,
 				DB611DB4237F2F8400041BAF /* EventsViewController.xib in Resources */,
 				DB82BD66237F74C1000B8D21 /* EventsTableViewCell.xib in Resources */,
+				DB4D4C93237FF11A004AAFAE /* GuestsViewController.xib in Resources */,
 				DB260343237E04000076F63A /* LaunchScreen.storyboard in Resources */,
 				DB260340237E04000076F63A /* Assets.xcassets in Resources */,
 				DB26033E237E03FF0076F63A /* Main.storyboard in Resources */,
@@ -687,6 +710,7 @@
 				DB82BD65237F74C1000B8D21 /* EventsTableViewCell.swift in Sources */,
 				DB15621C237EFD4E00F2A7F1 /* LoginInteractor.swift in Sources */,
 				DB82BD4D237F6971000B8D21 /* EventsPresenter.swift in Sources */,
+				DB4D4C92237FF11A004AAFAE /* GuestsViewController.swift in Sources */,
 				DB611DC3237F4B0400041BAF /* LoginApiWorkerProtocol.swift in Sources */,
 				DB48CA9F237F03CB0082C86E /* ApiService.swift in Sources */,
 				DB48CAA5237F04490082C86E /* ApiErrorModel.swift in Sources */,
