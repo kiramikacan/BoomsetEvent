@@ -107,7 +107,7 @@ class ApiService {
     func handle(response: DataResponse<Any>, converter: ((Data) -> Any)?, callback: @escaping (ECallbackResultType) -> Void)  {
         // Get the status code of response
         if (response.response != nil) {
-            print(response.result.value)
+            print(response.result.value ?? "")
             let status = response.response!.statusCode;
             switch status {
             case EHttpStatusCode.OK.rawValue:
