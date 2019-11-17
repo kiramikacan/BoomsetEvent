@@ -24,5 +24,3 @@ Use **BoomsetEvent.xcworkspace** for this project from now on.
 * [Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
 
 * [Swift Commenting Guide](https://gist.github.com/hhtopcu/3237e1421eb57ddb135a#file-commentsmarkdownstyle-swift)
-
-* [Location and Maps Programming Guide](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html): 
