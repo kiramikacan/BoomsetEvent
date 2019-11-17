@@ -66,6 +66,10 @@
 		DB8C531F2380A733006EBC6C /* GuestsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C531E2380A733006EBC6C /* GuestsCacher.swift */; };
 		DB8C53212380A77A006EBC6C /* GuestsCacherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C53202380A77A006EBC6C /* GuestsCacherProtocol.swift */; };
 		DB8C53252380AC5B006EBC6C /* DataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8C53242380AC5B006EBC6C /* DataSourceType.swift */; };
+		DB98B54623813AAA00FE4849 /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98B54523813AAA00FE4849 /* LoginTestCase.swift */; };
+		DB98B54A23813FEE00FE4849 /* LoginTestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98B54923813FEE00FE4849 /* LoginTestPresenter.swift */; };
+		DB98B54C2381468D00FE4849 /* LoginTestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98B54B2381468D00FE4849 /* LoginTestInteractor.swift */; };
+		DB98B54E2381529000FE4849 /* LoginTestFakeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98B54D2381529000FE4849 /* LoginTestFakeInteractor.swift */; };
 		DBFE0900237F194800F1B2B0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE08FF237F194800F1B2B0 /* UserService.swift */; };
 		DBFE0902237F19CC00F1B2B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0901237F19CC00F1B2B0 /* User.swift */; };
 		DBFE0904237F1C0900F1B2B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE0903237F1C0900F1B2B0 /* Config.swift */; };
@@ -163,6 +167,10 @@
 		DB8C531E2380A733006EBC6C /* GuestsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsCacher.swift; sourceTree = "<group>"; };
 		DB8C53202380A77A006EBC6C /* GuestsCacherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestsCacherProtocol.swift; sourceTree = "<group>"; };
 		DB8C53242380AC5B006EBC6C /* DataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceType.swift; sourceTree = "<group>"; };
+		DB98B54523813AAA00FE4849 /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
+		DB98B54923813FEE00FE4849 /* LoginTestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestPresenter.swift; sourceTree = "<group>"; };
+		DB98B54B2381468D00FE4849 /* LoginTestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestInteractor.swift; sourceTree = "<group>"; };
+		DB98B54D2381529000FE4849 /* LoginTestFakeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestFakeInteractor.swift; sourceTree = "<group>"; };
 		DBFE08FF237F194800F1B2B0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DBFE0901237F19CC00F1B2B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBFE0903237F1C0900F1B2B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -276,7 +284,6 @@
 				DBFE08FD237F192A00F1B2B0 /* Services */,
 				DB260367237E04650076F63A /* Modules */,
 				DB260344237E04000076F63A /* Info.plist */,
-				DBFE0903237F1C0900F1B2B0 /* Config.swift */,
 			);
 			path = BoomsetEvent;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 		DB26034C237E04000076F63A /* BoomsetEventTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB98B54123813A3A00FE4849 /* Modules */,
 				DB26034D237E04000076F63A /* BoomsetEventTests.swift */,
 				DB26034F237E04010076F63A /* Info.plist */,
 			);
@@ -451,6 +459,7 @@
 			children = (
 				DB8C53232380AC45006EBC6C /* Enums */,
 				DB8C53222380AC3A006EBC6C /* Views */,
+				DBFE0903237F1C0900F1B2B0 /* Config.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -590,6 +599,25 @@
 				DB8C53242380AC5B006EBC6C /* DataSourceType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		DB98B54123813A3A00FE4849 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DB98B54223813A4500FE4849 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DB98B54223813A4500FE4849 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB98B54523813AAA00FE4849 /* LoginTestCase.swift */,
+				DB98B54923813FEE00FE4849 /* LoginTestPresenter.swift */,
+				DB98B54B2381468D00FE4849 /* LoginTestInteractor.swift */,
+				DB98B54D2381529000FE4849 /* LoginTestFakeInteractor.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		DBFE08FD237F192A00F1B2B0 /* Services */ = {
@@ -921,7 +949,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB98B54E2381529000FE4849 /* LoginTestFakeInteractor.swift in Sources */,
+				DB98B54C2381468D00FE4849 /* LoginTestInteractor.swift in Sources */,
 				DB26034E237E04000076F63A /* BoomsetEventTests.swift in Sources */,
+				DB98B54623813AAA00FE4849 /* LoginTestCase.swift in Sources */,
+				DB98B54A23813FEE00FE4849 /* LoginTestPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

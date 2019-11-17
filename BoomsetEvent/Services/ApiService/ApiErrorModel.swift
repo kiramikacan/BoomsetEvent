@@ -21,7 +21,7 @@ public class ApiErrorModel {
     
     var localizedDescription: String {
         get {
-            return type.localizedDescription
+            return "\(type)"
         }
     }
 }

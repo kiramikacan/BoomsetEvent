@@ -9,5 +9,6 @@
 import Foundation
 
 protocol LoginInteractorProtocol {
+    var presenter: LoginPresenterProtocol? { get set }
     func loginWithCredentials(username: String, password: String)
 }

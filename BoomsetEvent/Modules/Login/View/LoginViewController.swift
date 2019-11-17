@@ -72,12 +72,16 @@ extension LoginViewController: LoginViewProtocol {
         self.dismissProgress()
     }
 
-    func showWarningMessage() {
+    func showEmptyCredentialsMessage() {
         self.showWarningMessage(message: "Username or password may not be blank!")
     }
     
-    func showErrorMessage() {
+    func showInvalidCredentialsMessage() {
         self.showErrorMessage(message: "Username or password incorrect!")
+    }
+    
+    func showErrorMessage(_ message: String) {
+        self.showErrorMessage(message: message)
     }
 
 }

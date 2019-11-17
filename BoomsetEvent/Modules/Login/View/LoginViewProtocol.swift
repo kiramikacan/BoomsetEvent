@@ -12,6 +12,7 @@ protocol LoginViewProtocol {
     func gotoEvents()
     func showProggress()
     func closeProggress()
-    func showErrorMessage()
-    func showWarningMessage()
+    func showEmptyCredentialsMessage()
+    func showInvalidCredentialsMessage()
+    func showErrorMessage(_ message: String)
 }

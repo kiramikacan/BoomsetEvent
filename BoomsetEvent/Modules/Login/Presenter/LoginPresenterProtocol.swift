@@ -9,6 +9,10 @@
 import Foundation
 
 protocol LoginPresenterProtocol: class {
+    
+    var view: LoginViewProtocol? { get set }
+    var interactor: LoginInteractorProtocol? { get set }
+    
     func startLoginWithCredentials(username: String, password: String)
     
     func interactor(_ interactor: LoginInteractorProtocol, didSuccessWith data: User)
